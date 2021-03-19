@@ -1,3 +1,6 @@
 [submodule ".config/Mellow/config"]
 	path = .config/Mellow/config
 	url = https://github.com/chuxubank/proxy-config
+[submodule "/home/misaka/.config/rofi"]
+	path = /home/misaka/.config/rofi
+	url = https://github.com/dracula/rofi
