@@ -8,17 +8,16 @@ super + Return
 
 # program launcher
 alt + @space
-	rofi -show drun \
-		 -modi drun, run \
-		 -show-icons
+	rofi -combi-modi window,drun,ssh \
+		 -icon-theme "Papirus" \
+		 -show-icons \
+		 -terminal xst \
+		 -show combi
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# power
-super + l
-	dm-tool lock
 
 #
 # bspwm hotkeys
