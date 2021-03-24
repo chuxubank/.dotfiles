@@ -28,7 +28,7 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/main]
-;monitor = ${env:MONITOR:HDMI-1}
+monitor = ${env:MONITOR:HDMI-1-2}
 width = 100%
 height = 28
 ;offset-x = 1%
@@ -55,9 +55,9 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = bspwm i3
+modules-left = bspwm
 modules-center = mpd
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-right = filesystem backlight pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = center
 tray-padding = 2
@@ -169,6 +169,7 @@ label-urgent-padding = 2
 
 [module/mpd]
 type = internal/mpd
+host = /home/misaka/.mpd/socket
 format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
 
 icon-prev = 
@@ -197,7 +198,7 @@ bar-empty = ─
 bar-empty-font = 2
 bar-empty-foreground = ${colors.foreground-alt}
 
-[module/backlight-acpi]
+[module/backlight]
 inherit = module/xbacklight
 type = internal/backlight
 card = intel_backlight
@@ -275,6 +276,8 @@ label = %date%  %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
+
+click-right = pavucontrol
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL %percentage%%
