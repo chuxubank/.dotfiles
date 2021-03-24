@@ -19,5 +19,5 @@
 *.color15:    #E6E6E6
 
 !! xst
-st.font: JetBrainsMono:pixelsize=14
-st.borderpx: 9
+st.termname: st
+st.font: Cascadia Mono PL:pixelsize=16:antialias=true:autohint=true;
