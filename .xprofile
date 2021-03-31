@@ -1,3 +1,5 @@
 $HOME/Applications/Mellow.AppImage &
 
+greenclip daemon &
+
 dex -a &
