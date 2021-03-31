@@ -1,5 +1,3 @@
-setxkbmap -model pc106 -layout us -option ctrl:swapcaps
-
 $HOME/Applications/Mellow.AppImage &
 
 dex -a &
