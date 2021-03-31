@@ -6,3 +6,5 @@
 [user]
 	email = chuxubank@qq.com
 	name = Misaka
+[credential]
+	helper = libsecret

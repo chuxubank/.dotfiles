@@ -19,6 +19,4 @@ bspc rule -a Screenkey manage=off
 
 $HOME/.config/polybar/launch.sh
 
-ibus-daemon -xdr
-
 wmname LG3D

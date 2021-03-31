@@ -2,6 +2,4 @@ setxkbmap -model pc106 -layout us -option ctrl:swapcaps
 
 $HOME/Applications/Mellow.AppImage &
 
-nutstore &
-
-blueman-tray &
+dex -a &
