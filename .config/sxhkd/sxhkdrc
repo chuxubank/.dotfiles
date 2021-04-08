@@ -8,8 +8,8 @@ super + Return
 
 # program launcher
 alt + @space
-	rofi -modi power-menu:rofi-power-menu,clipboard:"greenclip print" \
-	     -combi-modi window,drun,ssh,power-menu,clipboard \
+	rofi -modi power-menu:rofi-power-menu,clipboard:"greenclip print",dict:dict \
+	     -combi-modi window,drun,ssh \
 		 -icon-theme "Papirus" \
 		 -show-icons \
 		 -terminal xst \
