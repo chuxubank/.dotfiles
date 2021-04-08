@@ -19,6 +19,4 @@ bspc rule -a Screenkey manage=off
 
 $HOME/.config/polybar/launch.sh
 
-setxkbmap -model pc106 -layout us -option ctrl:swapcaps
-
 wmname LG3D
