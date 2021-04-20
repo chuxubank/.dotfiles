@@ -8,3 +8,5 @@
 	name = Misaka
 [credential]
 	helper = libsecret
+[includeIf "gitdir:Developer/Work/"]
+	path = ~/Developer/Work/.gitconfig
