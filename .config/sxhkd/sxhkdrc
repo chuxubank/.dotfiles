@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 alt + @space
-	rofi -modi power-menu:rofi-power-menu,clipboard:"greenclip print",dict:dict \
+	rofi -modi power-menu:"rofi-power-menu --no-symbols",clipboard:"greenclip print",dict:dict \
 	     -combi-modi window,drun,ssh \
 		 -icon-theme "Papirus" \
 		 -show-icons \
