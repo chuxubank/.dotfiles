@@ -1,5 +1,3 @@
-$HOME/Applications/Mellow.AppImage &
-
 greenclip daemon &
 
-dex -a &
+ibus-daemon -x -d
