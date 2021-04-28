@@ -10,3 +10,5 @@
 	helper = libsecret
 [includeIf "gitdir:Developer/Work/"]
 	path = ~/Developer/Work/.gitconfig
+[pull]
+	rebase = true
