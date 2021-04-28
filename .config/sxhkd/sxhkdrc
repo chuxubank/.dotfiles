@@ -2,8 +2,15 @@
 # wm independent hotkeys
 #
 
+#
 # terminal emulator
+#
+# Attach to a detached session. If none is available create a new one, rather
+# than attach to one that is already attached to elsewhere.
 super + Return
+	xst -e bash -c "(tmux ls | grep -qEv 'attached|scratch' && tmux at) || tmux"
+
+ctrl + super + Return
 	xst
 
 # program launcher
@@ -128,3 +135,17 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# Media keys
+#
+
+# screenshot region
+Print
+	scrcap
+# screencast region to mp4
+super + Print
+	scrrec -s ~/Videos/Screenshot/$(date +%F-%T).mp4
+# screencast region to gif
+super + ctrl + Print
+	scrrec -s ~/Videos/Screenshot/$(date +%F-%T).gif

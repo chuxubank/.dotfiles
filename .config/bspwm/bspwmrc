@@ -1,11 +1,11 @@
-#! /bin/sh
+#!/usr/bin/env bash
 
 pgrep -x sxhkd >/dev/null || sxhkd &
 
-MONITOR_NUM=$(bspc query -M --names | wc -l)
+MONITORS=($(bspc query -M --names))
 MONITOR=$(xrandr -q | grep primary | cut -d' ' -f1)
 
-case $MONITOR_NUM in
+case ${#MONITORS[@]} in
 1)
 	bspc monitor -d I II III IV V VI VII VIII IX X
 	;;
@@ -13,6 +13,9 @@ case $MONITOR_NUM in
 	bspc monitor $MONITOR -d II III IV V VI VII VIII IX X
 	;;
 esac
+
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
 
 bspc config border_width 2
 bspc config window_gap 12
