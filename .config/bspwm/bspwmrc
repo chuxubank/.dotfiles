@@ -1,18 +1,25 @@
 #! /bin/sh
 
-pgrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x sxhkd >/dev/null || sxhkd &
 
-MONITOR=xrandr -q | grep primary | cut -d' ' -f1
+MONITOR_NUM=$(bspc query -M --names | wc -l)
+MONITOR=$(xrandr -q | grep primary | cut -d' ' -f1)
 
-bspc monitor eDP1 -d I
-bspc monitor $MONITOR -d II III IV V VI VII VIII IX X
+case $MONITOR_NUM in
+1)
+	bspc monitor -d I II III IV V VI VII VIII IX X
+	;;
+2)
+	bspc monitor $MONITOR -d II III IV V VI VII VIII IX X
+	;;
+esac
 
-bspc config border_width         2
-bspc config window_gap          12
+bspc config border_width 2
+bspc config window_gap 12
 
-bspc config split_ratio          0.52
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
+bspc config split_ratio 0.52
+bspc config borderless_monocle true
+bspc config gapless_monocle true
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
@@ -22,5 +29,6 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Emacs state=tiled
 
 $HOME/.config/polybar/launch.sh
+$HOME/.fehbg
 
 wmname LG3D

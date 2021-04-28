@@ -19,6 +19,10 @@ alt + @space
 super + Escape
 	pkill -USR1 -x sxhkd
 
+# lockscreen
+alt + shift + x
+    betterlockscreen -l dim
+
 #
 # bspwm hotkeys
 #
