@@ -1,0 +1,19 @@
+[Unit]
+Description= NutStore Sync %i (rclone)
+AssertPathIsDirectory=%h/%i
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5
+ExecStart=/sbin/rclone mount nutstore:%i %h/%i \
+                       --allow-non-empty \
+                       --vfs-cache-mode full \
+                       --vfs-cache-max-age 24h
+
+ExecStop=/sbin/fusermount -uz %h/%i
+
+[Install]
+WantedBy=default.target

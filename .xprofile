@@ -3,7 +3,3 @@
 greenclip daemon &
 
 ibus-daemon -x -d
-
-rclone mount nutstore:PDFs ~/PDFs --allow-non-empty --vfs-cache-mode full &
-rclone mount nutstore:org ~/org --allow-non-empty --vfs-cache-mode full &
-rclone mount nutstore:RimeSync ~/RimeSync --allow-non-empty --vfs-cache-mode full &
