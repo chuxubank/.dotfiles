@@ -13,6 +13,7 @@ export PATH="$ANDROID_HOME/build-tools/33.0.0/:$PATH"
 # export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # Java
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
