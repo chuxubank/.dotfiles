@@ -22,3 +22,6 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 
 # HASS
 export HASS_SERVER=http://homeassistant.local:8123
+
+# Doom
+export PATH="$HOME/.config/emacs/bin:$PATH"
