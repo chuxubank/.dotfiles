@@ -25,3 +25,7 @@ export HASS_SERVER=http://homeassistant.local:8123
 
 # Doom
 export PATH="$HOME/.config/emacs/bin:$PATH"
+
+# Beancount
+export BEANCOUNT_FILE="$HOME/org/beancount/ledger.beancount"
+export FAVA_PORT=8888
