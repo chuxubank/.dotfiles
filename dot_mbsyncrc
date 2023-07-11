@@ -1,0 +1,27 @@
+IMAPAccount aa
+Host outlook.office365.com
+User xu.chu@assaabloy.com
+PassCmd "pass show Work/AA/IT | head -1"
+SSLType IMAPS
+SSLVersions TLSv1.2
+AuthMechs PLAIN
+Timeout 120
+PipelineDepth 50
+
+IMAPStore aa-remote
+Account aa
+
+MaildirStore aa-local
+Path ~/.maildir/aa/
+Inbox ~/.maildir/aa/Inbox
+SubFolders Verbatim
+
+Channel aa
+Far :aa-remote:
+Near :aa-local:
+Patterns *
+Expunge None
+CopyArrivalDate yes
+Sync All
+Create Both
+SyncState *
