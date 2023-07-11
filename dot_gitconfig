@@ -1,0 +1,16 @@
+[user]
+name = Misaka
+email = chuxubank@qq.com
+[core]
+excludesfile = /Users/xuchu1/.gitignore_global
+autocrlf = input
+[init]
+defaultBranch = main
+[pull]
+rebase = true
+[rebase]
+autoStash = true
+[credential "https://github.com"]
+helper = !/usr/local/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+helper = !/usr/local/bin/gh auth git-credential
