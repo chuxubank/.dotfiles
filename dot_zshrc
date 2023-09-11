@@ -113,3 +113,6 @@ alias ci="export CIRCLECI=true && export CI=true && export key_file_path='/' && 
 command -v pyenv >/dev/null
 eval "$(pyenv init -)"
 
+# gpg
+GPG_TTY=$(tty)
+export GPG_TTY
