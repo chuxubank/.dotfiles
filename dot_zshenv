@@ -35,3 +35,6 @@ export PATH="$HOME/.config/emacs/bin:$PATH"
 # Beancount
 export BEANCOUNT_FILE="$HOME/org/beancount/ledger.beancount"
 export FAVA_PORT=8888
+
+# ZeroTier
+export PATH="/Library/Application\ Support/ZeroTier/One:$PATH"
