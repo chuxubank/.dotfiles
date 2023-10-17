@@ -118,9 +118,6 @@ alias upef="emacs --fg-daemon --eval '(concat (package-upgrade-all) (straight-pu
 alias upec="emacsclient --eval '(package-upgrade-all)' && emacsclient --eval '(straight-pull-all)' && emacsclient --eval '(straight-check-all)' && emacsclient --eval '(kill-emacs)' && emacs --daemon"
 alias up="upb && upec"
 
-command -v pyenv >/dev/null
-eval "$(pyenv init -)"
-
 # gpg
 GPG_TTY=$(tty)
 export GPG_TTY
