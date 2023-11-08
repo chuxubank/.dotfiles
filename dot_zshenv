@@ -34,3 +34,6 @@ export FAVA_PORT=8888
 
 # ZeroTier
 export PATH="/Library/Application\ Support/ZeroTier/One:$PATH"
+
+# vcpkg
+export VCPKG_ROOT="$HOME/vcpkg"
