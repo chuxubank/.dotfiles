@@ -121,3 +121,10 @@ alias up="upb && upec"
 # gpg
 GPG_TTY=$(tty)
 export GPG_TTY
+
+# vterm
+if [[ "$INSIDE_EMACS" = 'vterm' ]] \
+    && [[ -n ${EMACS_VTERM_PATH} ]] \
+    && [[ -f ${EMACS_VTERM_PATH}/etc/emacs-vterm-zsh.sh ]]; then
+	source ${EMACS_VTERM_PATH}/etc/emacs-vterm-zsh.sh
+fi
