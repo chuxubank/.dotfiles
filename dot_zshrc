@@ -114,9 +114,9 @@ alias kill-zscaler="sudo find /Library/Launch* -name '*zscaler*' -exec launchctl
 
 alias upb="brew update && brew upgrade"
 alias uped="emacs --daemon && emacsclient --eval '(package-upgrade-all)' && emacsclient --eval '(kill-emacs)'"
-alias upef="emacs --fg-daemon --eval '(concat (package-upgrade-all) (kill-emacs))'"
+alias upef="emacs --fg-daemon --eval '(package-upgrade-all)'"
 alias upec="emacsclient --eval '(package-upgrade-all)' && emacsclient --eval '(kill-emacs)' && emacs --daemon"
-alias up="upb && upec"
+alias up="upb && upef"
 
 # gpg
 GPG_TTY=$(tty)
