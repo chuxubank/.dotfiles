@@ -116,7 +116,7 @@ alias upb="brew update && brew upgrade"
 alias uped="emacs --daemon && emacsclient --eval '(package-upgrade-all)' && emacsclient --eval '(kill-emacs)'"
 alias upef="emacs --fg-daemon --eval '(package-upgrade-all)'"
 alias upec="emacsclient --eval '(package-upgrade-all)' && emacsclient --eval '(kill-emacs)' && emacs --daemon"
-alias up="upb && upef"
+alias up="upb && upec"
 
 # gpg
 GPG_TTY=$(tty)
