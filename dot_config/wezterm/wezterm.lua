@@ -1,5 +1,5 @@
--- Pull in the wezterm API
 local wezterm = require 'wezterm'
+local theme = require 'theme'
 
 -- This table will hold the configuration.
 local config = {}
@@ -10,10 +10,17 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
--- This is where you actually apply your config choices
-config.window_decorations = "RESIZE"
+-- Font
 config.font_size = 14
+
+-- UI
+config.window_decorations = "RESIZE"
+config.tab_bar_at_bottom = true
+config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
+
+-- Modules
+config.color_scheme = theme.color_scheme
 
 -- and finally, return the configuration to wezterm
 return config
