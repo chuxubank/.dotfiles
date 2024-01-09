@@ -1,0 +1,12 @@
+packages:
+  darwin:
+    brews:
+      - "antigen"
+      - "starship"
+      - "git"
+      - "mas"
+      - "zsh-syntax-highlighting"
+    casks:
+      - "android-commandlinetools"
+      - "android-platform-tools"
+      - "codewhisperer"
