@@ -7,11 +7,23 @@ function get_appearance()
   return 'Dark'
 end
 
+local dark = {
+   "Gruvbox Dark (Gogh)",
+   "Everforest Dark (Gogh)"
+}
+
+local light = {
+   "Gruvbox (Gogh)",
+   "EverforestLight (Gogh)"
+}
+
+local index = math.random(#dark)
+
 function scheme_for_appearance(appearance)
   if appearance:find 'Dark' then
-    return 'Gruvbox Dark (Gogh)'
+    return dark[index]
   else
-    return 'Gruvbox (Gogh)'
+    return light[index]
   end
 end
 
