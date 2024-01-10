@@ -5,8 +5,11 @@ packages:
       - "starship"
       - "git"
       - "mas"
+      - "zsh-autosuggestions"
       - "zsh-syntax-highlighting"
     casks:
       - "android-commandlinetools"
       - "android-platform-tools"
       - "codewhisperer"
+    mas:
+      Amphetamine: 937984704
