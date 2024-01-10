@@ -1,4 +1,4 @@
-export EDITOR="emacsclient -nw"
+export EDITOR="emacsclient -t -a=''"
 export LANG=en_US.UTF-8
 export TZ="Asia/Shanghai"
 
@@ -38,3 +38,6 @@ export PATH="/Library/Application\ Support/ZeroTier/One:$PATH"
 # vcpkg
 export VCPKG_ROOT="$HOME/vcpkg"
 export PATH=$VCPKG_ROOT:$PATH
+
+# Jira
+export JIRA_URL="https://aaecosystem.atlassian.net"
