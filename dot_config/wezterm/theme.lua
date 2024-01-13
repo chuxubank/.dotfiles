@@ -7,15 +7,9 @@ function get_appearance()
   return 'Dark'
 end
 
-local dark = {
-   "Gruvbox Dark (Gogh)",
-   "Everforest Dark (Gogh)"
-}
+local dark = {"Gruvbox Dark (Gogh)", "Everforest Dark (Gogh)"}
 
-local light = {
-   "Gruvbox (Gogh)",
-   "EverforestLight (Gogh)"
-}
+local light = {"Gruvbox (Gogh)", "EverforestLight (Gogh)"}
 
 local index = math.random(#dark)
 
@@ -28,5 +22,5 @@ function scheme_for_appearance(appearance)
 end
 
 return {
-  color_scheme = scheme_for_appearance(get_appearance()),
+  color_scheme = scheme_for_appearance(get_appearance())
 }
