@@ -1,7 +1,7 @@
 local wezterm = require 'wezterm'
 local mux = wezterm.mux
 local launch_menu = {}
-local default_prog = {}
+local default_prog
 local set_environment_variables = {}
 
 wezterm.on("gui-startup", function(cmd)
