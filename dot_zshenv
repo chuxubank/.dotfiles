@@ -20,7 +20,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # Java
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
-export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+[[ -f "/usr/libexec/java_home" ]] && export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 
 # HASS
 export HASS_SERVER=http://homeassistant.local:8123
