@@ -1,3 +1,5 @@
+# chezmoi:template:line-endings=native
+
 # CodeWhisperer pre block. Keep at the top of this file.
 [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
 
@@ -80,21 +82,40 @@ plugins=(
     jira
 )
 
-source $ZSH/oh-my-zsh.sh
+source_if_exists $ZSH/oh-my-zsh.sh
+
+# plugin
+source_if_exists $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source_if_exists $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source_if_exists /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source_if_exists /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# starship
+if [[ "$TERM_PROGRAM" = 'WezTerm' ]]; then
+    eval "$(starship init zsh)"
+fi
+
+# vterm
+if [[ "$INSIDE_EMACS" = 'vterm' ]] \
+    && [[ -n ${EMACS_VTERM_PATH} ]] \
+    && [[ -f ${EMACS_VTERM_PATH}/etc/emacs-vterm-zsh.sh ]]; then
+	source ${EMACS_VTERM_PATH}/etc/emacs-vterm-zsh.sh
+fi
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='emacsclient -t -a='''
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -127,23 +148,6 @@ alias up="upb && upe"
 # gpg
 GPG_TTY=$(tty)
 export GPG_TTY
-
-# vterm
-if [[ "$INSIDE_EMACS" = 'vterm' ]] \
-    && [[ -n ${EMACS_VTERM_PATH} ]] \
-    && [[ -f ${EMACS_VTERM_PATH}/etc/emacs-vterm-zsh.sh ]]; then
-	source ${EMACS_VTERM_PATH}/etc/emacs-vterm-zsh.sh
-fi
-
-# plugin
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# starship
-if [[ "$TERM_PROGRAM" = 'WezTerm' ]]; then
-    eval "$(starship init zsh)"
-fi
-
 
 # CodeWhisperer post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
