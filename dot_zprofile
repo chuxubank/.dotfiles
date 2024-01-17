@@ -1,5 +1,9 @@
+function source_if_exists() {
+    [[ -f $1 ]] && builtin source $1
+}
+
 # CodeWhisperer pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zprofile.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zprofile.pre.zsh"
+source_if_exists "${HOME}/Library/Application Support/codewhisperer/shell/zprofile.pre.zsh"
 export LC_ALL=en_US.UTF-8
 
 # Added by OrbStack: command-line tools and integration
@@ -12,9 +16,5 @@ export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
 
-function source_if_exists() {
-    [[ -f $1 ]] && source $1
-}
-
 # CodeWhisperer post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zprofile.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zprofile.post.zsh"
+source_if_exists "${HOME}/Library/Application Support/codewhisperer/shell/zprofile.post.zsh"

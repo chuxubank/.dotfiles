@@ -1,7 +1,7 @@
 # chezmoi:template:line-endings=native
 
 # CodeWhisperer pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
+source_if_exists "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.pre.zsh"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -150,4 +150,4 @@ GPG_TTY=$(tty)
 export GPG_TTY
 
 # CodeWhisperer post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
+source_if_exists "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
