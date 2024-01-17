@@ -7,9 +7,9 @@ function get_appearance()
   return 'Dark'
 end
 
-local dark = {"Gruvbox Dark (Gogh)", "Everforest Dark (Gogh)"}
+local dark = {"Gruvbox Dark (Gogh)"}
 
-local light = {"Gruvbox (Gogh)", "EverforestLight (Gogh)"}
+local light = {"EverforestLight (Gogh)"}
 
 local index = math.random(#dark)
 
