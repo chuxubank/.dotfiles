@@ -21,3 +21,4 @@ $PSReadLineOptions = @{
     }
 }
 Set-PSReadLineOption @PSReadLineOptions
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
