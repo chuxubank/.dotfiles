@@ -1,3 +1,15 @@
+function source_if_exists {
+    [[ -f $1 ]] && builtin source $1
+}
+
+function outside_emacs {
+    [[ -z "$INSIDE_EMACS" ]] && [[ "$INSIDE_EMACS" != 'vterm' ]]
+}
+
+function source_if_exists_outside_emacs {
+    [[ -f $1 ]] && outside_emacs && builtin source $1
+}
+
 export TZ="Asia/Shanghai"
 
 # Android
