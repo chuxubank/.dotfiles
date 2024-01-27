@@ -100,6 +100,12 @@ plugins=(
     z
 )
 
+if [[ "$TERM_PROGRAM" = 'WezTerm' ]]; then
+    plugins+=(starship)
+else
+    plugins+=(timer)
+fi
+
 source_if_exists $ZSH/oh-my-zsh.sh
 
 # plugin
@@ -109,14 +115,10 @@ source_if_exists $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highl
 source_if_exists /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source_if_exists /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# command-not-found
 HB_CNF_HANDLER="$(brew --repository)/Library/Taps/homebrew/homebrew-command-not-found/handler.sh"
 if [ -f "$HB_CNF_HANDLER" ]; then
     source "$HB_CNF_HANDLER";
-fi
-
-# starship
-if [[ "$TERM_PROGRAM" = 'WezTerm' ]]; then
-    eval "$(starship init zsh)"
 fi
 
 # vterm
