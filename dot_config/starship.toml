@@ -21,7 +21,9 @@ $haskell\
 $python\
 [](fg:color_blue bg:color_bg3)\
 $docker_context\
-[](fg:color_bg3 bg:color_bg1)\
+[](fg:color_bg3 bg:color_bg2)\
+$cmd_duration\
+[](fg:color_bg2 bg:color_bg1)\
 $time\
 [ ](fg:color_bg1)\
 $line_break$character"""
@@ -31,6 +33,7 @@ palette = 'gruvbox_dark'
 [palettes.gruvbox_dark]
 color_fg0 = '#fbf1c7'
 color_bg1 = '#3c3836'
+color_bg2 = '#4d4a48'
 color_bg3 = '#665c54'
 color_blue = '#458588'
 color_aqua = '#689d6a'
@@ -142,6 +145,11 @@ format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
 symbol = ""
 style = "bg:color_bg3"
 format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
+
+[cmd_duration]
+show_milliseconds = true
+style = "bg:color_bg2"
+format = '[[  $duration ](fg:color_fg0 bg:color_bg2)]($style)'
 
 [time]
 disabled = false
