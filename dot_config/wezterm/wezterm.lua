@@ -1,7 +1,7 @@
-local wezterm = require 'wezterm'
-local theme = require 'theme'
-local launch = require 'launch'
-local keys = require 'keys'
+local wezterm = require("wezterm")
+local theme = require("theme")
+local launch = require("launch")
+local keys = require("keys")
 
 -- This table will hold the configuration.
 local config = {}
@@ -22,7 +22,6 @@ config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = true
 
 -- Modules
-config.color_scheme = theme.color_scheme
 config.launch_menu = launch.launch_menu
 config.default_prog = launch.default_prog
 config.set_environment_variables = launch.set_environment_variables
