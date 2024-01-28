@@ -1,0 +1,3 @@
+{{ if ne .chezmoi.os "windows" }}
+dot_config/scoop/config.json
+{{ end }}
