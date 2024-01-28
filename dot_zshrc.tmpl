@@ -116,10 +116,7 @@ source_if_exists /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source_if_exists /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # command-not-found
-HB_CNF_HANDLER="$(brew --repository)/Library/Taps/homebrew/homebrew-command-not-found/handler.sh"
-if [ -f "$HB_CNF_HANDLER" ]; then
-    source "$HB_CNF_HANDLER";
-fi
+source_if_exists $HOMEBREW_REPOSITORY/Library/Taps/homebrew/homebrew-command-not-found/handler.sh
 
 # vterm
 if [[ "$INSIDE_EMACS" = 'vterm' ]] \
