@@ -137,11 +137,11 @@ else
   export EDITOR='emacsclient -t -a='''
 fi
 
-{{ if eq .chezmoi.os "linux" }}
-{{   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+{{- if eq .chezmoi.os "linux" }}
+{{-   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 # WSL-specific code
-{{   end }}
-{{ end }}
+{{-   end }}
+{{- end }}
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

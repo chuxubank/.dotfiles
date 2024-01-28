@@ -1,5 +1,5 @@
-{{ if ne .chezmoi.os "windows" }}
+{{- if ne .chezmoi.os "windows" }}
 .config/scoop
 AppData
 Documents/WindowsPowerShell
-{{ end }}
+{{- end }}
