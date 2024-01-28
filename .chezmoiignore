@@ -1,5 +1,5 @@
 {{ if ne .chezmoi.os "windows" }}
-dot_config/scoop/config.json
-AppData\**
-Documents\WindowsPowerShell\**
+.config/scoop/config.json
+AppData/**
+Documents/WindowsPowerShell/**
 {{ end }}
