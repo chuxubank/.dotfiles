@@ -25,3 +25,9 @@ autoStash = true
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !{{ .path.gh }} auth git-credential
+
+{{ if eq .chezmoi.os "windows" -}}
+[credential]
+	helper = 
+	helper = manager
+{{ end -}}
