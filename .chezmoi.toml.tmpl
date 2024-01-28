@@ -2,3 +2,17 @@
 
 [data]
     email = {{ $email | quote }}
+
+[data.path]
+{{- if eq .chezmoi.os "darwin" -}}
+# darwin
+    gh = ""
+{{- else if eq .chezmoi.os "linux" -}}
+# linux
+    gh = ""
+{{- else if eq .chezmoi.os "windows" -}}
+# windows
+    gh = "'C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe'"
+{{- else -}}
+# unknown
+{{- end -}}
