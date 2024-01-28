@@ -6,10 +6,10 @@
 [data.path]
 {{- if eq .chezmoi.os "darwin" -}}
 # darwin
-    gh = ""
+    gh = "/usr/local/bin/gh"
 {{- else if eq .chezmoi.os "linux" -}}
 # linux
-    gh = ""
+    gh = "/usr/bin/gh"
 {{- else if eq .chezmoi.os "windows" -}}
 # windows
     gh = "'C:\\\\Program Files\\\\GitHub CLI\\\\gh.exe'"
