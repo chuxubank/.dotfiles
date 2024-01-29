@@ -90,7 +90,6 @@ plugins=(
     gpg-agent
     gradle
     jira
-    macos
     man
     mosh
     rsync
@@ -104,6 +103,10 @@ if [[ "$TERM_PROGRAM" = 'WezTerm' ]]; then
     plugins+=(starship)
 else
     plugins+=(timer)
+fi
+
+if [[ "$(uname)" = 'Darwin' ]]; then
+    plugins+=(macos)
 fi
 
 source_if_exists $ZSH/oh-my-zsh.sh
