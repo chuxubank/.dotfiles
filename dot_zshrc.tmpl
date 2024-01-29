@@ -167,7 +167,11 @@ alias start-zscaler="open -a /Applications/Zscaler/Zscaler.app --hide; sudo find
 alias kill-zscaler="sudo find /Library/Launch* -name '*zscaler*' -exec launchctl unload {} \;; pkill -x Zscaler"
 
 alias upb="brew update && brew upgrade"
-alias upe="emacsclient -a='' --eval '(package-upgrade-all)' && emacsclient --eval '(kill-emacs)' && emacs --daemon"
+if $(\emacs --version | grep -q "mac"); then
+    alias upe="\emacsclient --eval '(package-upgrade-all)' && \emacsclient --eval '(kill-emacs)' && \emacs &"
+else
+    alias upe="\emacsclient -a='' --eval '(package-upgrade-all)' && \emacsclient --eval '(kill-emacs)' && \emacs --daemon"
+fi
 alias up="upb && upe"
 
 # CodeWhisperer post block. Keep at the bottom of this file.
