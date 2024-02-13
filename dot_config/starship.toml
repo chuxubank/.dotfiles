@@ -3,6 +3,7 @@
 format = """
 [](color_orange)\
 $os\
+${env_var.MSYS2}\
 $username\
 [](bg:color_yellow fg:color_orange)\
 $directory\
@@ -73,6 +74,11 @@ show_always = true
 style_user = "bg:color_orange fg:color_fg0"
 style_root = "bg:color_orange fg:color_fg0"
 format = '[ $user ]($style)'
+
+[env_var.MSYS2]
+variable = 'MSYSTEM'
+style = "bg:color_orange fg:color_fg0"
+format = '[ $env_value ]($style)'
 
 [directory]
 style = "fg:color_fg0 bg:color_yellow"
