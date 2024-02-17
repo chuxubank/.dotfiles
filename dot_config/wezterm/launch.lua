@@ -19,6 +19,11 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     args = {'C:/msys64/msys2_shell.cmd', '-defterm', '-no-start', '-full-path', '-ucrt64', '-shell', 'zsh', '-where',
             'C:/msys64/home/%USERNAME%'}
   })
+  table.insert(launch_menu, {
+    label = 'MINGW64 / MSYS2',
+    args = {'C:/msys64/msys2_shell.cmd', '-defterm', '-no-start', '-full-path', '-mingw64', '-shell', 'zsh', '-where',
+            'C:/msys64/home/%USERNAME%'}
+  })
 
   default_prog = {'pwsh.exe', '-NoLogo'}
 
