@@ -163,8 +163,8 @@ alias ci="export CIRCLECI=true && export CI=true && export key_file_path='/' && 
 alias zs='http_proxy="http://127.0.0.1:9000"; HTTP_PROXY="http://127.0.0.1:9000"; https_proxy="http://127.0.0.1:9000"; HTTPS_PROXY="http://127.0.0.1:9000"'
 alias zssg='http_proxy="http://10.29.248.90:80"; HTTP_PROXY="http://10.29.248.90:80"; https_proxy="http://10.29.248.90:80"; HTTPS_PROXY="http://10.29.248.90:80"'
 
-alias start-zscaler="open -a /Applications/Zscaler/Zscaler.app --hide; sudo find /Library/Launch* -name '*zscaler*' -exec launchctl load {} \;"
-alias kill-zscaler="sudo find /Library/Launch* -name '*zscaler*' -exec launchctl unload {} \;; pkill -x Zscaler"
+alias start-zscaler="sudo launchctl bootstrap system /Library/LaunchDaemons/com.zscaler.tunnel.plist"
+alias kill-zscaler="sudo launchctl bootout system/com.zscaler.tunnel"
 
 alias upb="brew update && brew upgrade"
 if [[ -n "$(\emacs --version | grep -q 'mac')" ]]; then
