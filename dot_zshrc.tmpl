@@ -174,5 +174,9 @@ else
 fi
 alias up="upb && upe"
 
+{{- if eq .chezmoi.hostname "CNSHBL0454" }}
+zs
+{{- end }}
+
 # CodeWhisperer post block. Keep at the bottom of this file.
 source_if_exists_outside_emacs "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
