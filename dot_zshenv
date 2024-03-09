@@ -44,3 +44,8 @@ export PATH=$VCPKG_ROOT:$PATH
 
 # Jira
 export JIRA_URL="https://aaecosystem.atlassian.net"
+
+# MSYS2
+if [[ -n "$MSYSTEM" ]]; then
+    export FZF_BASE=${MSYSTEM_PREFIX}/share/fzf
+fi
