@@ -109,6 +109,11 @@ if [[ "$(uname)" = 'Darwin' ]]; then
     plugins+=(macos)
 fi
 
+# MSYS2
+if [[ -n "$MSYSTEM" ]]; then
+    export FZF_BASE=${MSYSTEM_PREFIX}/share/fzf
+fi
+
 source_if_exists $ZSH/oh-my-zsh.sh
 
 # plugin
