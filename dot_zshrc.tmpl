@@ -143,6 +143,10 @@ fi
 {{- if eq .chezmoi.os "linux" }}
 {{-   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 # WSL-specific code
+export http_proxy="socks5://127.0.0.1:10800"
+export HTTP_PROXY="socks5://127.0.0.1:10800"
+export https_proxy="socks5://127.0.0.1:10800"
+export HTTPS_PROXY="socks5://127.0.0.1:10800"
 {{-   end }}
 {{- end }}
 
