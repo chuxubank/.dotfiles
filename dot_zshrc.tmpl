@@ -77,6 +77,8 @@ ZSH_THEME="half-life"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     adb
+    alias-finder
+    aliases
     brew
     command-not-found
     docker
@@ -112,6 +114,8 @@ fi
 source_if_exists $ZSH/oh-my-zsh.sh
 
 # plugin
+zstyle ':omz:plugins:alias-finder' autoload yes
+
 source_if_exists $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source_if_exists $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source_if_exists $HOMEBREW_REPOSITORY/Library/Taps/homebrew/homebrew-command-not-found/handler.sh
