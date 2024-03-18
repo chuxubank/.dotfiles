@@ -188,3 +188,7 @@ zs
 
 # CodeWhisperer post block. Keep at the bottom of this file.
 source_if_exists_outside_emacs "${HOME}/Library/Application Support/codewhisperer/shell/zshrc.post.zsh"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+source_if_exists "$HOME/.sdkman/bin/sdkman-init.sh"
