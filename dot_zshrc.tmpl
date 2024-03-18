@@ -147,10 +147,7 @@ fi
 {{- if eq .chezmoi.os "linux" }}
 {{-   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 # WSL-specific code
-export http_proxy="socks5://127.0.0.1:10800"
-export HTTP_PROXY="socks5://127.0.0.1:10800"
-export https_proxy="socks5://127.0.0.1:10800"
-export HTTPS_PROXY="socks5://127.0.0.1:10800"
+export {all,tcp,http,https,socks}_proxy="socks5://127.0.0.1:10800"
 {{-   end }}
 {{- end }}
 
@@ -166,14 +163,6 @@ export HTTPS_PROXY="socks5://127.0.0.1:10800"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ci="export CIRCLECI=true && export CI=true && export key_file_path='/' && export key_alias='' && export key_password='' && export key_alias_password=''"
-
-alias zs='http_proxy="http://127.0.0.1:9000"; HTTP_PROXY="http://127.0.0.1:9000"; https_proxy="http://127.0.0.1:9000"; HTTPS_PROXY="http://127.0.0.1:9000"'
-alias zssg='http_proxy="http://10.29.248.90:80"; HTTP_PROXY="http://10.29.248.90:80"; https_proxy="http://10.29.248.90:80"; HTTPS_PROXY="http://10.29.248.90:80"'
-
-alias start-zscaler="sudo launchctl bootstrap system /Library/LaunchDaemons/com.zscaler.tunnel.plist"
-alias kill-zscaler="sudo launchctl bootout system/com.zscaler.tunnel"
-
 alias upb="brew update && brew upgrade"
 if [[ -n "$(\emacs --version | grep -q 'mac')" ]]; then
     alias upe="\emacsclient --eval '(package-upgrade-all)' && \emacsclient --eval '(kill-emacs)' && \emacs &"
@@ -183,7 +172,16 @@ fi
 alias up="upb && upe"
 
 {{- if eq .chezmoi.hostname "CNSHBL0454" }}
-zs
+alias ci="export CIRCLECI=true && export CI=true && export key_file_path='/' && export key_alias='' && export key_password='' && export key_alias_password=''"
+alias start-zscaler="sudo launchctl bootstrap system /Library/LaunchDaemons/com.zscaler.tunnel.plist"
+alias kill-zscaler="sudo launchctl bootout system/com.zscaler.tunnel"
+alias zs='export {http,https}_proxy="http://127.0.0.1:9000"'
+alias zssg='export {http,https}_proxy="http://10.29.248.90:80"'
+
+location=$(networksetup -getcurrentlocation)
+if [[ "$location" = 'Work' ]]; then
+    zs
+fi
 {{- end }}
 
 # CodeWhisperer post block. Keep at the bottom of this file.
