@@ -1,0 +1,11 @@
+[packages.arch.pacman]
+core = [
+]
+extra = [
+  "starship",
+  "zsh-autosuggestions",
+  "zsh-syntax-highlighting",
+]
+aur = [
+  "zsh-antidote",
+]

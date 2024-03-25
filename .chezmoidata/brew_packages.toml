@@ -1,0 +1,49 @@
+[packages.darwin]
+taps = [
+  "beeftornado/rmtree",
+  "d12frosted/emacs-plus",
+  "homebrew/bundle",
+  "homebrew/cask",
+  "homebrew/cask-fonts",
+  "homebrew/command-not-found",
+  "homebrew/core",
+  "homebrew/services",
+  "jimeh/emacs-builds",
+  "railwaycat/emacsmacport",
+]
+brews = [
+  "antidote",
+  "starship",
+  "git",
+  { name = "gnupg", link = false },
+  { name = "gnupg@2.2", link = true },
+  { name = "logrotate", restart_service = true },
+  "mas",
+  "zsh-autosuggestions",
+  "zsh-syntax-highlighting",
+]
+casks = [
+  "android-commandlinetools",
+  "android-platform-tools",
+  "anki",
+  "appcleaner",
+  "bilibili",
+  "calibre",
+  "discord",
+  "dozer",
+  "font-cascadia-code",
+  "font-dejavu",
+  "font-fira-code",
+  "font-inter",
+  "font-iosevka",
+  "codewhisperer",
+  "itsycal",
+  "iina",
+]
+
+[packages.darwin.mas]
+Amphetamine = 937_984_704
+ImmersiveTranslate = 6_447_957_425
+KeyPad = 1_491_684_442
+Xcode = 497_799_835
+Developer = 640_199_958
