@@ -144,18 +144,18 @@ casks = [
 ]
 
 [packages.darwin.mas]
-Amphetamine = 937984704
-Developer = 640199958
+"Amphetamine" = 937984704
+"Developer" = 640199958
 "Final Cut Pro" = 424389933
 "Immersive Translate" = 6447957425
-Juice = 1478610778
-KeyPad = 1491684442
+"Juice" = 1478610778
+"KeyPad" = 1491684442
 "Logic Pro" = 634148309
-MainStage = 634159523
-MenubarX = 1575588022
+"MainStage" = 634159523
+"MenubarX" = 1575588022
 "Microsoft Remote Desktop" = 1295203466
-Playgrounds = 1496833156
+"Playgrounds" = 1496833156
 "RSSHub Radar" = 1610744717
 "The Unarchiver" = 425424353
-WeChat = 836500024
-Xcode = 497799835
+"WeChat" = 836500024
+"Xcode" = 497799835
