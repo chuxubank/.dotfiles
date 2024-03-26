@@ -6,7 +6,11 @@
 [data.path]
 {{- if eq .chezmoi.os "darwin" }}
 # darwin
+{{- if eq .chezmoi.arch "arm64" }}
+    gh = "/opt/homebrew/bin/gh"
+{{- else }}
     gh = "/usr/local/bin/gh"
+{{- end }}
 {{- else if eq .chezmoi.os "linux" }}
 # linux
     gh = "/usr/bin/gh"
