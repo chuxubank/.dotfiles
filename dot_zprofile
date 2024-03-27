@@ -1,17 +1,11 @@
 # CodeWhisperer pre block. Keep at the top of this file.
 source_if_exists_outside_emacs "${HOME}/Library/Application Support/codewhisperer/shell/zprofile.pre.zsh"
+
 export LC_ALL=en_US.UTF-8
 
 # Added by OrbStack: command-line tools and integration
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
-# Set PATH, MANPATH, etc., for Homebrew.
-[[ -f "/usr/local/bin/brew" ]] && eval "$(/usr/local/bin/brew shellenv)"
-[[ -f "/opt/homebrew/bin/brew" ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
-export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
-export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
-export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
-export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
 
 # CodeWhisperer post block. Keep at the bottom of this file.
 source_if_exists_outside_emacs "${HOME}/Library/Application Support/codewhisperer/shell/zprofile.post.zsh"
