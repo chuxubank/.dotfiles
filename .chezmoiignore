@@ -5,5 +5,5 @@ Documents/WindowsPowerShell
 .wslconfig
 {{- end }}
 {{- if ne .chezmoi.os "darwin" }}
-Brewfile
+.config/xray/homebrew.mxcl.xray.plist
 {{- end }}
