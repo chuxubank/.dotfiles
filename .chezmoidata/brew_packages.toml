@@ -76,7 +76,6 @@ brews = [
   "zsh-syntax-highlighting",
 ]
 casks = [
-  "android-commandlinetools",
   "android-file-transfer",
   "android-platform-tools",
   "anki",
