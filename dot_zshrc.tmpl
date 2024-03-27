@@ -147,7 +147,6 @@ fi
 {{- if eq .chezmoi.os "linux" }}
 {{-   if (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
 # WSL-specific code
-export {all,tcp,http,https,socks}_proxy="socks5://127.0.0.1:10800"
 {{-   end }}
 {{- end }}
 
@@ -182,6 +181,8 @@ location=$(networksetup -getcurrentlocation)
 if [[ "$location" = 'Work' ]]; then
     zs
 fi
+{{- else }}
+alias proxy='export {all,tcp,http,https,socks}_proxy="socks5://127.0.0.1:10800"'
 {{- end }}
 
 # CodeWhisperer post block. Keep at the bottom of this file.
