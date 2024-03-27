@@ -6,6 +6,11 @@ export LC_ALL=en_US.UTF-8
 # Added by OrbStack: command-line tools and integration
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
+# Added by Toolbox App
+export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+
+# JDK
+export PATH="$HOMEBREW_PREFIX/opt/openjdk/bin:$PATH"
 
 # CodeWhisperer post block. Keep at the bottom of this file.
 source_if_exists_outside_emacs "${HOME}/Library/Application Support/codewhisperer/shell/zprofile.post.zsh"

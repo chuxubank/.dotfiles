@@ -2,12 +2,8 @@ function source_if_exists {
     [[ -f $1 ]] && builtin source $1
 }
 
-function outside_emacs {
-    [[ -z "$INSIDE_EMACS" ]] && [[ "$INSIDE_EMACS" != 'vterm' ]]
-}
-
 function source_if_exists_outside_emacs {
-    [[ -f $1 ]] && outside_emacs && builtin source $1
+    [[ -f $1 ]] && [[ -z "$INSIDE_EMACS" ]] && builtin source $1
 }
 
 export TZ="Asia/Shanghai"
@@ -25,30 +21,25 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export ANDROID_SDK_ROOT=$ANDROID_HOME
 export PATH="$ANDROID_HOME/build-tools/33.0.0/:$PATH"
 
-# XDG
-export XDG_CONFIG_HOME="$HOME/.config"
-
-# Java
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-export CPPFLAGS="-I/usr/local/opt/openjdk/include"
-[[ -f "/usr/libexec/java_home" ]] && export JAVA_HOME=$(/usr/libexec/java_home -v 17)
-
-# HASS
-export HASS_SERVER=http://homeassistant.local:8123
-
-# Doom
-export PATH="$HOME/.config/emacs/bin:$PATH"
-
 # Beancount
 export BEANCOUNT_FILE="$HOME/org/beancount/ledger.beancount"
 export FAVA_PORT=8888
 
-# ZeroTier
-export PATH="/Library/Application\ Support/ZeroTier/One:$PATH"
+# Doom
+export PATH="$HOME/.config/emacs/bin:$PATH"
 
-# vcpkg
-export VCPKG_ROOT="$HOME/vcpkg"
-export PATH=$VCPKG_ROOT:$PATH
+# HASS
+export HASS_SERVER=http://homeassistant.local:8123
+
+# Java
+[[ -f "/usr/libexec/java_home" ]] && export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 
 # Jira
 export JIRA_URL="https://aaecosystem.atlassian.net"
+
+# VCPKG
+export VCPKG_ROOT="$HOME/vcpkg"
+export PATH=$VCPKG_ROOT:$PATH
+
+# XDG
+export XDG_CONFIG_HOME="$HOME/.config"
