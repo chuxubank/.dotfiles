@@ -33,9 +33,13 @@ export HASS_SERVER=http://homeassistant.local:8123
 
 # Java
 [[ -f "/usr/libexec/java_home" ]] && export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+export PATH="$(brew --prefix java)/bin:$PATH"
 
 # Jira
 export JIRA_URL="https://aaecosystem.atlassian.net"
+
+# Python
+export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 
 # VCPKG
 export VCPKG_ROOT="$HOME/vcpkg"
