@@ -110,6 +110,7 @@ casks = [
   "karabiner-elements",
   "kindle",
   "libreoffice",
+  "logitech-options",
   "logseq",
   "lyricsx",
   "mactex-no-gui",
