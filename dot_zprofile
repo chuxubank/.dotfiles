@@ -1,5 +1,5 @@
 # CodeWhisperer pre block. Keep at the top of this file.
-source_if_exists_outside_emacs "${HOME}/Library/Application Support/codewhisperer/shell/zprofile.pre.zsh"
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zprofile.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zprofile.pre.zsh"
 
 export LC_ALL=en_US.UTF-8
 
@@ -26,4 +26,4 @@ export CPPFLAGS="-I$(brew --prefix java)/include"
 export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 
 # CodeWhisperer post block. Keep at the bottom of this file.
-source_if_exists_outside_emacs "${HOME}/Library/Application Support/codewhisperer/shell/zprofile.post.zsh"
+[[ -f "${HOME}/Library/Application Support/codewhisperer/shell/zprofile.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/codewhisperer/shell/zprofile.post.zsh"
