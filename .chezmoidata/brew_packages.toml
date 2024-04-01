@@ -55,6 +55,7 @@ brews = [
   "pass-otp",
   "pgformatter",
   "plantuml",
+  "poetry",
   "pylint",
   "pyright",
   "python",
