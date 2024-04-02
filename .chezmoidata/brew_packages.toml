@@ -16,6 +16,7 @@ brews = [
   "beancount",
   "black",
   "chezmoi",
+  "cmake",
   "coreutils",
   "curl",
   "fava",
