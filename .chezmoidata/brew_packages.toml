@@ -60,6 +60,7 @@ brews = [
   "pylint",
   "pyright",
   "python",
+  "python@3.8",
   "python-lsp-server",
   "ripgrep",
   "rust",
