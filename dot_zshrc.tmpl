@@ -180,7 +180,7 @@ alias ci="export CIRCLECI=true && export CI=true && export key_file_path='/' && 
 alias zs='export {http,https}_proxy="http://127.0.0.1:9000"'
 alias zssg='export {http,https}_proxy="http://10.29.248.90:80"'
 
-location=$(networksetup -getcurrentlocation)
+NET_LOCAL=$(networksetup -getcurrentlocation)
 {{- end }}
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
