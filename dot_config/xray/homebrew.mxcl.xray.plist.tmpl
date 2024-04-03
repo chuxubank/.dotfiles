@@ -20,9 +20,10 @@
 	</array>
 	<key>ProgramArguments</key>
 	<array>
-        <string>/bin/zsh</string>
-        <string>-c</string>
-		<string>xray run -confdir ~/.config/proxy/client/xray/{{ .network }}</string>
+      <string>/bin/zsh</string>
+      <string>-i</string>
+      <string>-c</string>
+        <string>xray run -confdir ~/.config/proxy/client/xray/${(L)location:-"basic"}</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
