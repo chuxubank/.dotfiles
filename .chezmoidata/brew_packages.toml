@@ -61,6 +61,7 @@ brews = [
   "prettier",
   "pylint",
   "pyright",
+  "pipenv",
   "python",
   "python-lsp-server",
   "python@3.8",

@@ -71,6 +71,8 @@ ZSH_THEME="half-life"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 SHELLPROXY_CONFIG="$HOME/.config/shell-proxy.sh"
+PYTHON_VENV_NAME=".venv"
+PYTHON_AUTO_VRUN=true
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -110,7 +112,10 @@ plugins=(
 if [[ "$TERM_PROGRAM" = 'WezTerm' ]]; then
     plugins+=(starship)
 else
-    plugins+=(timer)
+    plugins+=(
+        timer
+        virtualenv
+    )
 fi
 
 if [[ "$(uname)" = 'Darwin' ]]; then
