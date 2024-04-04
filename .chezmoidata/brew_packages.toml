@@ -42,6 +42,7 @@ brews = [
   "libgccjit",
   "libvterm",
   { name = "logrotate", restart_service = true },
+  "markdown",
   "mas",
   "mosh",
   "mu",
