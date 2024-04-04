@@ -93,6 +93,7 @@ casks = [
   "deepl",
   "discord",
   "dozer",
+  "emacs-app",
   "font-cascadia-code",
   "font-dejavu",
   "font-fira-code",
