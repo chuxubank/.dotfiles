@@ -114,7 +114,6 @@ casks = [
   "font-roboto-serif",
   "font-roboto-slab",
   "font-sf-mono",
-  "font-sf-mono-for-powerline",
   "font-sf-pro",
   "font-symbols-only-nerd-font",
   "font-victor-mono",
