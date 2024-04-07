@@ -8,6 +8,9 @@ function source_if_exists_outside_emacs {
 
 export TZ="Asia/Shanghai"
 
+# XDG
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Android
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export ANDROID_SDK_ROOT=$ANDROID_HOME
@@ -33,9 +36,9 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
+# Poetry
+export POETRY_CONFIG_DIR="$XDG_CONFIG_HOME/pypoetry"
+
 # VCPKG
 export VCPKG_ROOT="$HOME/vcpkg"
 export PATH=$VCPKG_ROOT:$PATH
-
-# XDG
-export XDG_CONFIG_HOME="$HOME/.config"
