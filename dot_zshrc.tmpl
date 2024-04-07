@@ -75,12 +75,6 @@ SHELLPROXY_CONFIG="$HOME/.config/shell-proxy.sh"
 PYTHON_VENV_NAME=".venv"
 PYTHON_AUTO_VRUN=true
 
-NVM_HOMEBREW=$(brew --prefix nvm)
-zstyle ':omz:plugins:nvm' lazy yes
-zstyle ':omz:plugins:nvm' lazy-cmd eslint prettier typescript
-zstyle ':omz:plugins:nvm' autoload yes
-zstyle ':omz:plugins:nvm' silent-autoload yes
-
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -105,9 +99,6 @@ plugins=(
     jira
     man
     mosh
-    node
-    npm
-    nvm
     python
     qrcode
     rsync
