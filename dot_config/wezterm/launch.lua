@@ -4,10 +4,10 @@ local launch_menu = {}
 local default_prog
 local set_environment_variables = {}
 
--- wezterm.on("gui-startup", function(cmd)
---   local tab, pane, window = mux.spawn_window(cmd or {})
---   window:gui_window():maximize()
--- end)
+wezterm.on("gui-startup", function(cmd)
+  local tab, pane, window = mux.spawn_window(cmd or {})
+  window:gui_window():maximize()
+end)
 
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
   table.insert(launch_menu, {
