@@ -3,5 +3,5 @@ type = webdav
 url = https://dav.jianguoyun.com/dav/
 vendor = other
 user = chuxubank@qq.com
-pass = {{ pass "Personal/Nutstore/rclone" }}
+pass = {{ pass "Personal/Nutstore/rclone" | output "rclone" "obscure" }}
 
