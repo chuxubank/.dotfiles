@@ -36,6 +36,10 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
+# plum
+export PLUM_DIR="$HOME/.plum"
+export PATH=$PLUM_DIR:$PATH
+
 # Poetry
 export POETRY_CONFIG_DIR="$XDG_CONFIG_HOME/pypoetry"
 
