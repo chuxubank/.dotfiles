@@ -6,4 +6,8 @@ Documents/WindowsPowerShell
 {{- end }}
 {{- if ne .chezmoi.os "darwin" }}
 .config/xray/homebrew.mxcl.xray.plist
+.config/karabiner
 {{- end }}
+
+# symbol link source
+.config/karabiner/real_karabiner.json
