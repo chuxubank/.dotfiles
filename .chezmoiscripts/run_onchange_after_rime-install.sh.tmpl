@@ -1,4 +1,4 @@
 #!/bin/zsh
 
-# {{ stat (joinPath .chezmoi.homeDir ".plum") }}
+# {{ output "git" "-C" (joinPath .chezmoi.homeDir ".plum") "rev-parse" "HEAD" }}
 rime-install :all
