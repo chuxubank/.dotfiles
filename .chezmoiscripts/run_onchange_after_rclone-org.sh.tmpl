@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+{{ if eq .chezmoi.os "darwin" -}}
+launchctl bootout user/$(id -u)/njcw.rclone.org
+launchctl bootstrap user/$(id -u) ~/.config/rclone/njcw.rclone.org.plist
+{{ end -}}
