@@ -1,4 +1,5 @@
 #!/bin/zsh
 
-# {{ output "git" "-C" (joinPath .chezmoi.homeDir ".plum") "rev-parse" "HEAD" }}
+echo "󰯁 Update rime with {{ output "git" "-C" (joinPath .chezmoi.homeDir ".plum") "rev-parse" "HEAD" }}"
+
 rime-install :all
