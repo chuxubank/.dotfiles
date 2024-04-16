@@ -1,6 +1,0 @@
-{{ if eq .chezmoi.os "darwin" -}}
-#!/bin/zsh
-echo "󰯁 Restart njcw.rclone.org with {{ include (joinPath .chezmoi.homeDir ".config/rclone/njcw.rclone.org.plist") | sha256sum }}"
-launchctl bootout user/$(id -u)/njcw.rclone.org
-launchctl bootstrap user/$(id -u) $HOME/.config/rclone/njcw.rclone.org.plist
-{{ end -}}

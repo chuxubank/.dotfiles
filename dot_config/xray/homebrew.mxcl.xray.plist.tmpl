@@ -20,10 +20,7 @@
 	</array>
 	<key>ProgramArguments</key>
 	<array>
-      <string>/bin/zsh</string>
-      <string>-i</string>
-      <string>-c</string>
-      <string>xray run -confdir ~/.config/proxy/client/xray/${(L)NET_LOCAL:-"basic"}</string>
+      <string>{{ .path.brew }}/xray run -confdir {{ .chezmoi.homeDir }}/.config/proxy/client/xray/${(L)NET_LOCAL:-"basic"}</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>

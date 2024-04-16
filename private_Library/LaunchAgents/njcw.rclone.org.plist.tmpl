@@ -20,10 +20,7 @@
 	</array>
 	<key>ProgramArguments</key>
 	<array>
-      <string>/bin/zsh</string>
-      <string>-i</string>
-      <string>-c</string>
-      <string>rclone nfsmount nutstore:org ~/org --vfs-cache-mode full --volname org</string>
+      <string>{{ .path.brew }}/nfsmount nutstore:org {{ .chezmoi.homeDir }}/org --vfs-cache-mode full --volname org</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
