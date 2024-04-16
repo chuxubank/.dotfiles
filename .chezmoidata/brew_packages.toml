@@ -28,6 +28,7 @@ brews = [
   "git",
   "git-lfs",
   "gitwatch",
+  "gnupg",
   "gradle",
   "graphviz",
   "hidapi",
@@ -86,8 +87,6 @@ brews = [
   "zsh",
   "zsh-autosuggestions",
   "zsh-syntax-highlighting",
-  { name = "gnupg", link = false },
-  { name = "gnupg@2.2", link = true },
   { name = "logrotate", restart_service = true },
 ]
 casks = [
