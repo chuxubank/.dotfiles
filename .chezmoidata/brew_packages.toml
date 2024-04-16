@@ -57,6 +57,7 @@ brews = [
   "pass",
   "pass-otp",
   "pgformatter",
+  "pinentry-mac",
   "pipenv",
   "plantuml",
   "poetry",
