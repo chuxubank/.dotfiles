@@ -2,14 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
-	<key>KeepAlive</key>
-	<true/>
 	<key>Label</key>
-	<string>njcw.rclone.org</string>
+	<string>njcw.rclone</string>
     <key>StandardOutPath</key>
-    <string>{{ .chezmoi.homeDir }}/Library/Logs/rclone/rclone-org-stdout.log</string>
+    <string>{{ .chezmoi.homeDir }}/Library/Logs/rclone/rclone-stdout.log</string>
     <key>StandardErrorPath</key>
-    <string>{{ .chezmoi.homeDir }}/Library/Logs/rclone/rclone-org-stderr.log</string>
+    <string>{{ .chezmoi.homeDir }}/Library/Logs/rclone/rclone-stderr.log</string>
 	<key>LimitLoadToSessionType</key>
 	<array>
 	  <string>Aqua</string>
@@ -29,7 +27,5 @@
       <string>--volname</string>
       <string>Work</string>
 	</array>
-	<key>RunAtLoad</key>
-	<true/>
   </dict>
 </plist>
