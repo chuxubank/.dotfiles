@@ -25,6 +25,11 @@
       <string>origin</string>
       <string>{{ .chezmoi.homeDir }}/org</string>
 	</array>
+	<key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>{{ .path.brew }}:/bin:/usr/bin</string>
+    </dict>
 	<key>RunAtLoad</key>
 	<true/>
   </dict>
