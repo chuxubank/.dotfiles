@@ -7,9 +7,9 @@
 	<key>Label</key>
 	<string>homebrew.mxcl.xray</string>
     <key>StandardOutPath</key>
-    <string>{{ .chezmoi.homeDir }}/Library/Logs/Xray/stdout.log</string>
+    <string>{{ .chezmoi.homeDir }}/Library/Logs/Xray/xray-{{ .network }}-stdout.log</string>
     <key>StandardErrorPath</key>
-    <string>{{ .chezmoi.homeDir }}/Library/Logs/Xray/stderr.log</string>
+    <string>{{ .chezmoi.homeDir }}/Library/Logs/Xray/xray-{{ .network }}-stderr.log</string>
 	<key>LimitLoadToSessionType</key>
 	<array>
       <string>Aqua</string>
