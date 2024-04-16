@@ -67,6 +67,7 @@ brews = [
   "ripgrep",
   "rust",
   "scrcpy",
+  "sleepwatcher",
   "starship",
   "swagger-codegen",
   "switchaudio-osx",
