@@ -27,6 +27,7 @@ brews = [
   "gcc",
   "git",
   "git-lfs",
+  "gitwatch",
   "gradle",
   "graphviz",
   "hidapi",
