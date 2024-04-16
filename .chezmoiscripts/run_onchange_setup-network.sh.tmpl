@@ -7,4 +7,5 @@ logrotate -f /usr/local/etc/logrotate.d/xray
 networksetup -setairportpower en0 on
 networksetup -switchtolocation {{ title .network | quote }}
 brew services start xray --file=$HOME/.config/xray/homebrew.mxcl.xray.plist
+sleep 5
 {{ end -}}
