@@ -1,7 +1,9 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
+{{- $network := promptStringOnce . "network" "Network location" -}}
 
 [data]
     email = {{ $email | quote }}
+	network = {{ $network | quote }}
 
 [data.path]
 {{- if eq .chezmoi.os "darwin" }}

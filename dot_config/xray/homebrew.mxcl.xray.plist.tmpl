@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
+  <dict>
 	<key>KeepAlive</key>
 	<true/>
 	<key>Label</key>
@@ -12,17 +12,20 @@
     <string>{{ .chezmoi.homeDir }}/Library/Logs/Xray/stderr.log</string>
 	<key>LimitLoadToSessionType</key>
 	<array>
-		<string>Aqua</string>
-		<string>Background</string>
-		<string>LoginWindow</string>
-		<string>StandardIO</string>
-		<string>System</string>
+      <string>Aqua</string>
+      <string>Background</string>
+      <string>LoginWindow</string>
+      <string>StandardIO</string>
+      <string>System</string>
 	</array>
 	<key>ProgramArguments</key>
 	<array>
-      <string>{{ .path.brew }}/xray run -confdir {{ .chezmoi.homeDir }}/.config/proxy/client/xray/${(L)NET_LOCAL:-"basic"}</string>
+      <string>{{ .path.brew }}/xray</string>
+      <string>run</string>
+      <string>-confdir</string>
+      <string>{{ .chezmoi.homeDir }}/.config/proxy/client/xray/{{ .network }}</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
-</dict>
+  </dict>
 </plist>
