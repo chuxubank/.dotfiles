@@ -1,3 +1,12 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/zsh
+
+echo "󰯁 Setup network {{ title .network }} with {{ output "git" "-C" (joinPath .chezmoi.homeDir ".config/proxy") "rev-parse" "HEAD" }}"
+logrotate -f /usr/local/etc/logrotate.d/xray
+networksetup -setairportpower en0 on
+networksetup -switchtolocation {{ title .network | quote }}
+brew services stop xray
+brew services start xray --file=/dev/stdin <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -29,3 +38,7 @@
 	<true/>
   </dict>
 </plist>
+EOF
+open -j "/Applications/Proxifier.app"
+sleep 5
+{{ end -}}
