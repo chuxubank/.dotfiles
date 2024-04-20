@@ -65,6 +65,7 @@ brews = [
   "pylint",
   "python",
   "python-lsp-server",
+  "radare2",
   "rclone",
   "ripgrep",
   "rust",
