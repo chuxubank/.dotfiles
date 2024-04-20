@@ -1,7 +1,0 @@
-#!/bin/zsh
-
-echo "󰯁 Update emacs with {{ output "git" "-C" (joinPath .chezmoi.homeDir ".emacs.d") "rev-parse" "HEAD" }}"
-
-\emacsclient -a='' --eval '(package-upgrade-all)' && \
-\emacsclient --eval '(kill-emacs)' && \
-\emacs --daemon
