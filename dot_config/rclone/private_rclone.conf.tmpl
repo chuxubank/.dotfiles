@@ -5,3 +5,8 @@ vendor = other
 user = chuxubank@qq.com
 pass = {{ pass "Personal/Nutstore/rclone" | output "rclone" "obscure" }}
 
+[rpi]
+type = sftp
+host = raspberrypi.local
+pass = {{ "123456" | output "rclone" "obscure" }}
+

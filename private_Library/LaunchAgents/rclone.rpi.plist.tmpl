@@ -3,7 +3,7 @@
 <plist version="1.0">
   <dict>
 	<key>Label</key>
-	<string>njcw.rclone</string>
+	<string>rclone.rpi</string>
     <key>StandardOutPath</key>
     <string>{{ .chezmoi.homeDir }}/Library/Logs/rclone/rclone-stdout.log</string>
     <key>StandardErrorPath</key>
@@ -20,12 +20,12 @@
 	<array>
       <string>{{ .path.brew }}/rclone</string>
 	  <string>nfsmount</string>
-      <string>nutstore:Work</string>
-      <string>{{ .chezmoi.homeDir }}/Work</string>
+      <string>rpi:</string>
+      <string>{{ .chezmoi.homeDir }}/rpi</string>
       <string>--vfs-cache-mode</string>
       <string>full</string>
       <string>--volname</string>
-      <string>Work</string>
+      <string>rpi</string>
 	</array>
   </dict>
 </plist>
