@@ -2,4 +2,6 @@
 
 echo "󰯁 Restart emacs with {{ output "git" "-C" (joinPath .chezmoi.homeDir ".emacs.d") "rev-parse" "HEAD" }}"
 
-\emacsclient --eval '(kill-emacs)' && \emacs --daemon
+\emacs --eval '(kill-emacs)' || true
+\emacsclient --eval '(kill-emacs)' || true
+\emacs --daemon
