@@ -3,7 +3,11 @@
 
 echo "󰯁 Setup network {{ title .network }} with {{ output "git" "-C" (joinPath .chezmoi.homeDir ".config/proxy") "rev-parse" "HEAD" }}"
 logrotate -f /usr/local/etc/logrotate.d/xray
-networksetup -setairportpower en0 on
+
+{{- if eq .chezmoi.hostname "CNSHBL0454" }}
+networksetup -setairportpower en0 {{ if eq .network "basic" -}} off {{- else -}} on {{- end -}}
+{{- end }}
+
 networksetup -switchtolocation {{ title .network | quote }}
 brew services stop xray
 brew services start xray --file=/dev/stdin <<EOF
