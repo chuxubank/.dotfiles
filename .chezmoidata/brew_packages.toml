@@ -16,6 +16,7 @@ brews = [
   "autorestic",
   "beancount",
   "black",
+  "btop",
   "byobu",
   "chezmoi",
   "cmake",
