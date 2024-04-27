@@ -3,3 +3,5 @@
 echo "󰯁 Update rime with {{ output "git" "-C" (joinPath .chezmoi.homeDir ".plum") "rev-parse" "HEAD" }}"
 
 rime-install :all
+rime-install emoji:customize:schema=luna_pinyin
+rime-install emoji:customize:schema=double_pinyin_flypy
