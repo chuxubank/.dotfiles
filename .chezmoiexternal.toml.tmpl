@@ -23,6 +23,14 @@
     url = "https://github.com/rime/plum"
     refreshPeriod = "168h"
 
+{{- if eq .chezmoi.os "darwin" }}
+[".rime/dist"]
+    type = "archive"
+    url = "{{ (first (gitHubLatestRelease "rime/librime").Assets).BrowserDownloadURL }}"
+    exact = true
+    stripComponents = 1
+{{- end }}
+
 [".password-store"]
     type = "git-repo"
     url = "https://github.com/chuxubank/pass"
