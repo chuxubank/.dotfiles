@@ -24,6 +24,7 @@ export CPPFLAGS="-I$(brew --prefix java)/include"
 
 # Python
 export PATH="$(brew --prefix python)/libexec/bin:$PATH"
+source virtualenvwrapper.sh
 
 # CodeWhisperer post block. Keep at the bottom of this file.
 source_if_exists_outside_emacs "${HOME}/Library/Application Support/codewhisperer/shell/zprofile.post.zsh"

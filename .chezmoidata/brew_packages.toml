@@ -80,6 +80,8 @@ brews = [
   "tmux",
   "tokei",
   "tree-sitter",
+  "virtualenv",
+  "virtualenvwrapper",
   "wget",
   "xray",
   "you-get",
