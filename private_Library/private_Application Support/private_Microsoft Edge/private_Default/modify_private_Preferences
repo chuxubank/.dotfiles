@@ -1,0 +1,2 @@
+{{- /* chezmoi:modify-template */ -}}
+{{ fromJson .chezmoi.stdin | setValueAtPath "browser.chat_ip_eligibility_status" true | toPrettyJson }}
