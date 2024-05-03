@@ -15,6 +15,7 @@ brews = [
   "aspell",
   "autorestic",
   "beancount",
+  "bfg",
   "black",
   "btop",
   "byobu",
