@@ -1,0 +1,6 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/zsh
+
+echo "󰯁 Setup macOS"
+defaults write com.apple.Maps AppleLanguages '("zh_CN")'
+{{ end -}}
