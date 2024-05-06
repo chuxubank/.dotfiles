@@ -1,8 +1,14 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
 {{- $networkLocationType := list "basic" "work" -}}
-{{- $network := promptChoiceOnce . "network" "Network location" $networkLocationType -}}
+{{- $ssid := output "networksetup" "-getairportnetwork" "en0" | trimPrefix "Current Wi-Fi Network: " | trim -}}
+{{- $network := "basic" -}}
 {{- $useHotspot := false }}
-{{- if and (eq .chezmoi.hostname "CNSHBL0454") (eq $network "basic") }}
+
+{{- if or (ne $ssid "Misaka") (ne $ssid .ssid) }}
+{{- $network = promptChoice "Network location" $networkLocationType -}}
+{{- end }}
+
+{{- if and (eq .chezmoi.hostname "CNSHBL0454") (eq $network "basic") (ne $ssid "Misaka")}}
 {{- $useHotspot = promptBool "Use Hotspot" }}
 {{- end }}
 
@@ -10,6 +16,7 @@
     email = {{- $email | quote }}
 	network = {{- $network | quote }}
 	useHotspot = {{- $useHotspot }}
+	ssid = {{- $ssid | quote }}
 
 [data.path]
 {{- if eq .chezmoi.os "darwin" }}
