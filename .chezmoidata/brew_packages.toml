@@ -52,7 +52,6 @@ brews = [
   "mosh",
   "mu",
   "mupdf",
-  "neofetch",
   "neovim",
   "openapi-generator",
   "openjdk@11",
