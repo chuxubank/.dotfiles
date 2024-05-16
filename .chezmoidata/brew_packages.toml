@@ -96,6 +96,7 @@ brews = [
   { name = "logrotate", restart_service = true },
 ]
 casks = [
+  "amazon-q",
   "android-file-transfer",
   "android-platform-tools",
   "anki",
@@ -103,7 +104,6 @@ casks = [
   "bilibili",
   "blackhole-16ch",
   "calibre",
-  "codewhisperer",
   "deepl",
   "discord",
   "dozer",
