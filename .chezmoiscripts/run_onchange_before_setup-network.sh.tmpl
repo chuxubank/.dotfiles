@@ -1,49 +1,11 @@
 {{ if eq .chezmoi.os "darwin" -}}
 #!/bin/zsh
 
-echo "󰯁 Setup network {{ title .network }} with {{ output "git" "-C" (joinPath .chezmoi.homeDir ".config/proxy") "rev-parse" "HEAD" }}"
-echo "Xray running: {{ output "brew" "services" "info" "xray" "--json" | fromJson | jq ".[0].running" | first }}"
-logrotate -f /usr/local/etc/logrotate.d/xray
-
+echo "󰯁 Setup network {{ title .network }}"
 {{- if eq .chezmoi.hostname "CNSHBL0454" }}
 networksetup -setairportpower en0 {{ if .useHotspot -}} off {{- else -}} on {{- end -}}
 {{- end }}
-
 networksetup -switchtolocation {{ title .network | quote }}
-brew services stop xray
-brew services start xray --file=/dev/stdin <<EOF
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-  <dict>
-	<key>KeepAlive</key>
-	<true/>
-	<key>Label</key>
-	<string>homebrew.mxcl.xray</string>
-    <key>StandardOutPath</key>
-    <string>{{ .chezmoi.homeDir }}/Library/Logs/Xray/xray-stdout.log</string>
-    <key>StandardErrorPath</key>
-    <string>{{ .chezmoi.homeDir }}/Library/Logs/Xray/xray-stderr.log</string>
-	<key>LimitLoadToSessionType</key>
-	<array>
-      <string>Aqua</string>
-      <string>Background</string>
-      <string>LoginWindow</string>
-      <string>StandardIO</string>
-      <string>System</string>
-	</array>
-	<key>ProgramArguments</key>
-	<array>
-      <string>{{ .path.brew }}/xray</string>
-      <string>run</string>
-      <string>-confdir</string>
-      <string>{{ .chezmoi.homeDir }}/.config/proxy/client/xray</string>
-	</array>
-	<key>RunAtLoad</key>
-	<true/>
-  </dict>
-</plist>
-EOF
+echo "Done"
 open -j "/Applications/Proxifier.app"
-sleep 5
 {{ end -}}
