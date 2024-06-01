@@ -1,7 +1,7 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
-{{- $networkLocationType := list "basic" "work" -}}
+{{- $networkLocationType := list "basic" "work" "automatic" -}}
 {{- $ssid := output "networksetup" "-getairportnetwork" "en0" | trimPrefix "Current Wi-Fi Network: " | trim -}}
-{{- $network := "basic" -}}
+{{- $network := "automatic" -}}
 {{- $useHotspot := false }}
 
 {{- if or (ne $ssid "Misaka") (ne $ssid .ssid) }}
