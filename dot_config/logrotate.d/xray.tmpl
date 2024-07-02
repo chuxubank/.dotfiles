@@ -1,0 +1,8 @@
+{{ .chezmoi.homeDir }}/Library/Logs/Xray/xray-stdout.log {
+  rotate 7
+  daily
+  missingok
+  notifempty
+  compress
+  create 0644 {{ .chezmoi.username }} {{ .chezmoi.group }}
+}
