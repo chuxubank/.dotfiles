@@ -5,7 +5,7 @@
 {{- $useHotspot := false }}
 {{- $isDarkMode := false }}
 
-{{- if or (ne $ssid "Misaka") (ne $ssid .ssid) }}
+{{- if ne $ssid "Misaka" }}
 {{- $network = promptChoice "Network location" $networkLocationType -}}
 {{- end }}
 
