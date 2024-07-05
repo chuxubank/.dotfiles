@@ -3,6 +3,7 @@
 {{- $ssid := output "networksetup" "-getairportnetwork" "en0" | trimPrefix "Current Wi-Fi Network: " | trim -}}
 {{- $network := "automatic" -}}
 {{- $useHotspot := false }}
+{{- $isDarkMode := false }}
 
 {{- if or (ne $ssid "Misaka") (ne $ssid .ssid) }}
 {{- $network = promptChoice "Network location" $networkLocationType -}}
@@ -12,11 +13,16 @@
 {{- $useHotspot = promptBool "Use Hotspot" }}
 {{- end }}
 
+{{- if eq .chezmoi.os "darwin" }}
+{{- $isDarkMode = eq "Dark" (output "sh" "-c" "defaults read -g AppleInterfaceStyle 2>/dev/null || true" | trim) }}
+{{- end }}
+
 [data]
     email = {{- $email | quote }}
 	network = {{- $network | quote }}
 	useHotspot = {{- $useHotspot }}
 	ssid = {{- $ssid | quote }}
+	isDarkMode = {{- $isDarkMode }}
 
 [data.path]
 {{- if eq .chezmoi.os "darwin" }}
