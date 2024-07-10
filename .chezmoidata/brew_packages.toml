@@ -32,6 +32,7 @@ brews = [
   "gitwatch",
   "gnupg",
   "gradle",
+  "gradle-profiler",
   "graphviz",
   "hidapi",
   "homeassistant-cli",
