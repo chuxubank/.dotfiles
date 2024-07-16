@@ -3,7 +3,6 @@ taps = [
   "beeftornado/rmtree",
   "d12frosted/emacs-plus",
   "homebrew/bundle",
-  "homebrew/cask-fonts",
   "homebrew/command-not-found",
   "homebrew/services",
   "jimeh/emacs-builds",
