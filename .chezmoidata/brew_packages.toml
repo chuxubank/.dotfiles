@@ -108,6 +108,7 @@ casks = [
   "deepl",
   "discord",
   "emacs-app",
+  "figma",
   "font-cascadia-code",
   "font-dejavu",
   "font-fira-code",
