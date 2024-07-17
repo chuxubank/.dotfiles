@@ -5,6 +5,7 @@ Documents/WindowsPowerShell
 .wslconfig
 {{- end }}
 {{- if ne .chezmoi.os "darwin" }}
-.config/xray/homebrew.mxcl.xray.plist
 Library
+{{- else if eq .hosttype "work" }}
+Library/LaunchAgents/rclone.rpi.plist
 {{- end }}
