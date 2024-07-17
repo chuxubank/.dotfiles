@@ -20,10 +20,8 @@ brew {{ . | quote }}
 {{ range .packages.darwin.casks -}}
 cask {{ . | quote }}
 {{ end -}}
-{{- if eq .hosttype "home" }}
 {{ range $appName, $appId := .packages.darwin.mas -}}
 mas {{ $appName | quote }}, id: {{ $appId }}
-{{ end -}}
 {{ end -}}
 EOF
 {{ end -}}
