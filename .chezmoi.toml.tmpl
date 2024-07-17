@@ -7,6 +7,10 @@
 {{- $isDarkMode = eq "Dark" (output "sh" "-c" "defaults read -g AppleInterfaceStyle 2>/dev/null || true" | trim) }}
 {{- end }}
 
+encryption = "gpg"
+[gpg]
+    recipient = "Misaka"
+
 [data]
     email = {{- $email | quote }}
     hosttype = {{- $hosttype | quote }}
