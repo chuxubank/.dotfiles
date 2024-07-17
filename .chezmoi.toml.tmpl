@@ -1,17 +1,7 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
-{{- $networkLocationType := list "basic" "work" "automatic" -}}
-{{- $ssid := output "networksetup" "-getairportnetwork" "en0" | trimPrefix "Current Wi-Fi Network: " | trim -}}
-{{- $network := "automatic" -}}
-{{- $useHotspot := false }}
+{{- $choices := list "home" "work" "other" -}}
+{{- $hosttype := promptChoiceOnce . "hosttype" "What type of host are you on" $choices -}}
 {{- $isDarkMode := false }}
-
-{{- if ne $ssid "Misaka" }}
-{{- $network = promptChoice "Network location" $networkLocationType -}}
-{{- end }}
-
-{{- if and (eq .chezmoi.hostname "CNSHBL0454") (eq $network "basic") (ne $ssid "Misaka")}}
-{{- $useHotspot = promptBool "Use Hotspot" }}
-{{- end }}
 
 {{- if eq .chezmoi.os "darwin" }}
 {{- $isDarkMode = eq "Dark" (output "sh" "-c" "defaults read -g AppleInterfaceStyle 2>/dev/null || true" | trim) }}
@@ -19,9 +9,7 @@
 
 [data]
     email = {{- $email | quote }}
-	network = {{- $network | quote }}
-	useHotspot = {{- $useHotspot }}
-	ssid = {{- $ssid | quote }}
+    hosttype = {{- $hosttype | quote }}
 	isDarkMode = {{- $isDarkMode }}
 
 [data.path]
