@@ -166,7 +166,7 @@ casks = [
   "wezterm",
   "wireshark",
   "xquartz",
-  "zotero",
+  "zotero@beta",
 ]
 
 [packages.darwin.mas]
