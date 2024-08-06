@@ -102,6 +102,7 @@ casks = [
   "android-platform-tools",
   "anki",
   "appcleaner",
+  "betterdisplay",
   "bilibili",
   "blackhole-16ch",
   "calibre",
