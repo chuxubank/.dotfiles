@@ -38,7 +38,6 @@ brews = [
   "htop",
   "imagemagick",
   "iperf3",
-  "isync",
   "jdtls",
   "jq",
   "ki",
@@ -47,6 +46,7 @@ brews = [
   "ktlint",
   "libgccjit",
   "libvterm",
+  "logrotate",
   "markdown",
   "mas",
   "mosh",
@@ -94,7 +94,7 @@ brews = [
   "zsh",
   "zsh-autosuggestions",
   "zsh-syntax-highlighting",
-  { name = "logrotate", restart_service = true },
+  { name = "isync", restart_service = true },
 ]
 casks = [
   "amazon-q",
