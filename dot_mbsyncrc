@@ -1,14 +1,11 @@
 # https://isync.sourceforge.io/mbsync.html
 
+## ASSA ABLOY
 IMAPAccount aa
 Host outlook.office365.com
 User xu.chu@assaabloy.com
 PassCmd "pass show Work/AA/IT | head -1"
-SSLType IMAPS
-SSLVersions TLSv1.2
-AuthMechs PLAIN
-Timeout 120
-PipelineDepth 50
+TLSType IMAPS
 
 IMAPStore aa-remote
 Account aa
@@ -21,6 +18,31 @@ SubFolders Verbatim
 Channel aa
 Far :aa-remote:
 Near :aa-local:
+Patterns *
+Expunge None
+CopyArrivalDate yes
+Sync All
+Create Both
+SyncState *
+
+## QQ
+IMAPAccount qq
+Host imap.qq.com
+User chuxubank@qq.com
+PassCmd "pass show Personal/Social/QQMail | head -1"
+TLSType IMAPS
+
+IMAPStore qq-remote
+Account qq
+
+MaildirStore qq-local
+Path ~/.maildir/qq/
+Inbox ~/.maildir/qq/Inbox
+SubFolders Verbatim
+
+Channel qq
+Far :qq-remote:
+Near :qq-local:
 Patterns *
 Expunge None
 CopyArrivalDate yes
