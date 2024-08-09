@@ -46,3 +46,6 @@ export POETRY_CONFIG_DIR="$XDG_CONFIG_HOME/pypoetry"
 # VCPKG
 export VCPKG_ROOT="$HOME/vcpkg"
 export PATH=$VCPKG_ROOT:$PATH
+
+# Emacs
+[[ -f "/opt/homebrew/bin/brew" ]] && export EMACSLOADPATH="/opt/homebrew/share/emacs/site-lisp/:"
