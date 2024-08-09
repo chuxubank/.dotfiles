@@ -24,6 +24,8 @@ brew services start logrotate --file=/dev/stdin <<EOF
     <array>
         <string>{{ .path.brew }}/sbin/logrotate</string>
         <string>{{ .chezmoi.homeDir }}/.config/logrotate.conf</string>
+        <string>-s</string>
+        <string>{{ .chezmoi.homeDir }}/.config/logrotate.status</string>
     </array>
     <key>RunAtLoad</key>
     <false/>

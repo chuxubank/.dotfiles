@@ -3,7 +3,7 @@
 
 echo "󰯁 Setup xray with {{ output "git" "-C" (joinPath .chezmoi.homeDir ".config/proxy") "rev-parse" "HEAD" }}"
 echo "Xray running: {{ output "brew" "services" "info" "xray" "--json" | fromJson | jq ".[0].running" | first }}"
-logrotate -f ~/.config/logrotate.d/xray
+logrotate -f ~/.config/logrotate.d/xray -s ~/.config/logrotate.status
 
 brew services stop xray
 brew services start xray --file=/dev/stdin <<EOF
