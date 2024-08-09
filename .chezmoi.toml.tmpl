@@ -20,10 +20,10 @@ encryption = "gpg"
 {{- if eq .chezmoi.os "darwin" }}
 # darwin
 {{- if eq .chezmoi.arch "arm64" }}
-    brew = "/opt/homebrew/bin"
+    brew = "/opt/homebrew"
     gh = "/opt/homebrew/bin/gh"
 {{- else }}
-    brew = "/usr/local/bin"
+    brew = "/usr/local"
     gh = "/usr/local/bin/gh"
 {{- end }}
 {{- else if eq .chezmoi.os "linux" }}
