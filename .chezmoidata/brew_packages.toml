@@ -137,7 +137,6 @@ casks = [
   "jetbrains-toolbox",
   "jordanbaird-ice",
   "karabiner-elements",
-  "kindle",
   "libreoffice",
   "logseq",
   "lyricsx",
@@ -177,6 +176,7 @@ casks = [
 "Immersive Translate" = 6447957425
 "Juice" = 1478610778
 "KeyPad" = 1491684442
+"Kindle" = 302584613
 "Logic Pro" = 634148309
 "MainStage" = 634159523
 "MenubarX" = 1575588022
