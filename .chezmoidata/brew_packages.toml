@@ -156,6 +156,7 @@ casks = [
   "postman",
   "proxifier",
   "proxyman",
+  "raspberry-pi-imager",
   "raycast",
   "rectangle",
   "sf-symbols",
