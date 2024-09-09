@@ -37,3 +37,6 @@ autoStash = true
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[diff "gpg"]
+    textconv = gpg --no-tty --decrypt
