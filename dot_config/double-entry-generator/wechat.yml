@@ -1,0 +1,80 @@
+defaultMinusAccount: Assets:FIXME
+defaultPlusAccount: Expenses:FIXME
+defaultCommissionAccount: Expenses:Commission:FIXME
+defaultCurrency: CNY
+title: 微信
+wechat:
+  rules:
+    - type: 收入
+      peer: 褚显峰
+      targetAccount: Income:Person:Feng
+    - type: 支出
+      peer: 褚显峰
+      targetAccount: Expenses:Person:Feng
+    - type: 收入
+      peer: 李珍
+      targetAccount: Income:Person:Zhen
+    - type: 支出
+      peer: 李珍
+      targetAccount: Expenses:Person:Zhen
+    - type: 收入
+      peer: 小🐷
+      targetAccount: Income:Person:Ning
+    - type: 支出
+      peer: 小🐷
+      targetAccount: Expenses:Person:Ning
+
+    - item: MUJI
+      targetAccount: Expenses:Utilities
+
+    - item: 点餐,餐饮,餐厅,面馆,堂食,美团收银,美团合作商家订单,Meituan,全州印象,四海游龙,Popeyes
+      time: 6:00-10:00
+      targetAccount: Expenses:Food:Restaurant:Breakfast
+    - item: 点餐,餐饮,餐厅,面馆,堂食,美团收银,美团合作商家订单,Meituan,全州印象,四海游龙,Popeyes
+      time: 11:00-14:00
+      targetAccount: Expenses:Food:Restaurant:Lunch
+    - item: 点餐,餐饮,餐厅,面馆,堂食,美团收银,美团合作商家订单,Meituan,全州印象,四海游龙,Popeyes
+      time: 16:00-22:00
+      targetAccount: Expenses:Food:Restaurant:Dinner
+    - peer: 趁热集合,生吐司,百丘,黄油与面包
+      targetAccount: Expenses:Food:Bread
+    - peer: 茉莉奶白
+      targetAccount: Expenses:Food:Drinks:MilkTea
+    - item: COFFEE,Coffee
+      targetAccount: Expenses:Food:Drinks:Coffee
+    - peer: Manner,luckin,M Stand
+      targetAccount: Expenses:Food:Drinks:Coffee
+    - peer: 红楼
+      targetAccount: Expenses:Food:Desserts:IceCream
+    - peer: 叙夏
+      targetAccount: Expenses:Food:Desserts
+    - item: citysuper
+      targetAccount: Expenses:Food:Groceries
+
+    - peer: SPAO
+      targetAccount: Expenses:Cloth
+
+    - peer: 中国电信
+      targetAccount: Expenses:Communication
+
+    - peer: 😶😶😶,搜候
+      targetAccount: Expenses:Transport:Car:Parking
+    - item: 停车,50223
+      targetAccount: Expenses:Transport:Car:Parking
+
+    - method: /
+      methodAccount: Assets:CN:WeChatPay:Checking
+    - method: 零钱
+      fullMatch: true
+      methodAccount: Assets:CN:WeChatPay:Checking
+    - method: 零钱通
+      fullMatch: true
+      methodAccount: Assets:CN:WeChatPay:MiniFund
+    - method: 浦发银行储蓄卡
+      methodAccount: Assets:CN:SPDB:Checking
+    - method: 江苏银行储蓄卡
+      methodAccount: Assets:CN:JSB:Checking
+    - method: 上海农商银行储蓄卡
+      methodAccount: Assets:CN:SHRCB:Checking
+    - method: 工商银行储蓄卡
+      methodAccount: Assets:CN:ICBC:Checking

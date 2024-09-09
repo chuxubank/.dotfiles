@@ -1,0 +1,146 @@
+# https://github.com/deb-sig/double-entry-generator?tab=readme-ov-file#%E6%94%AF%E4%BB%98%E5%AE%9D-3
+
+defaultMinusAccount: Assets:FIXME
+defaultPlusAccount: Expenses:FIXME
+defaultCurrency: CNY
+title: 支付宝
+alipay:
+  rules:
+    - type: 收入
+      peer: 暖暖
+      targetAccount: Income:Person:Ning
+    - type: 支出
+      peer: 暖暖
+      targetAccount: Expenses:Person:Ning
+    - type: 收入
+      peer: 小熊
+      targetAccount: Income:Person:Teddy
+    - type: 支出
+      peer: 小熊
+      targetAccount: Expenses:Person:Teddy
+    - type: 支出
+      peer: 小熊
+      method: 红包
+      ignore: true
+    - type: 收入
+      peer: NAM
+      targetAccount: Income:Person:Nam
+    - type: 支出
+      peer: NAM
+      targetAccount: Expenses:Person:Nam
+
+    - category: 日用百货,家居家装,运动户外
+      targetAccount: Expenses:Utilities
+    - category: 文化休闲
+      targetAccount: Expenses:Entertainment
+    - category: 数码电器
+      targetAccount: Expenses:Electronics
+    - category: 美容美发
+      targetAccount: Expenses:Shopping:PersonalCare
+    - category: 服饰装扮
+      targetAccount: Expenses:Shopping:Accessories
+    - category: 商业服务
+      targetAccount: Expenses:Business
+    - category: 酒店旅游
+      targetAccount: Expenses:Travel
+    - category: 医疗健康
+      targetAccount: Expenses:Health:Medical
+    - category: 餐饮美食
+      targetAccount: Expenses:Food:Groceries
+    - category: 餐饮美食
+      time: 6:00-10:00
+      targetAccount: Expenses:Food:Restaurant:Breakfast
+    - category: 餐饮美食
+      time: 11:00-14:00
+      targetAccount: Expenses:Food:Restaurant:Lunch
+    - category: 餐饮美食
+      time: 16:00-22:00
+      targetAccount: Expenses:Food:Restaurant:Dinner
+    - category: 投资理财
+      item: 理财赎回
+      methodAccount: Assets:CN:AliPay:Investments
+      targetAccount: Assets:CN:AliPay:Checking
+
+    - peer: 自如
+      item: 生活费用
+      targetAccount: Expenses:Home:ZiRoom:Living
+    - peer: 自如
+      item: 房租
+      targetAccount: Expenses:Home:ZiRoom:Rent
+    - item: 保洁,家服
+      targetAccount: Expenses:Home:Changtai:Housekeeping
+    - item: 酒店
+      targetAccount: Expenses:Hotel
+    - item: 公交
+      targetAccount: Expenses:Transport:Public
+    - item: 单车
+      targetAccount: Expenses:Transport:Public:Bike
+    - peer: 哈啰出行
+      targetAccount: Expenses:Transport:Public:Bike
+    - method: 单车骑行卡抵扣
+      ignore: true
+    - peer: 滴滴出行
+      item: 滴滴
+      targetAccount: Expenses:Transport:Taxi
+
+    - category: 退款
+      peer: 叮咚买菜
+      targetAccount: Expenses:Food:Groceries
+
+    - item: 海外退税金
+      targetAccount: Expenses:Travel:Shopping
+      methodAccount: Assets:CN:AliPay:Checking
+
+    - peer: 停车场
+      targetAccount: Expenses:Transport:Car:Parking
+    - category: 交通出行,爱车养车
+      item: ETC,通行费
+      targetAccount: Expenses:Transport:Car:KiaSoul:Toll
+    - peer: 平安保险
+      targetAccount: Expenses:Transport:Car:KiaSoul:Insurance
+    - peer: 南方航空
+      targetAccount: Expenses:Travel:Transport:Flights
+
+    - peer: racknerd
+      targetAccount: Expenses:Communication:Proxy
+    - peer: bwh
+      targetAccount: Expenses:Communication:Proxy
+    - peer: LetsGo
+      targetAccount: Expenses:Communication:Proxy
+
+    - item: Music
+      targetAccount: Expenses:Entertainment:Music
+
+    - peer: 花呗
+      fullMatch: true
+      targetAccount: Liabilities:CN:AliPay:Huabei
+
+    - method: 账户余额
+      fullMatch: true
+      methodAccount: Assets:CN:AliPay:Checking
+    - method: 余额宝
+      fullMatch: true
+      methodAccount: Assets:CN:AliPay:YuEBao
+    - method: 花呗
+      methodAccount: Liabilities:CN:AliPay:Huabei
+    - method: 浦发银行储蓄卡
+      methodAccount: Assets:CN:SPDB:Checking
+    - method: 江苏银行储蓄卡
+      methodAccount: Assets:CN:JSB:Checking
+    - method: 上海农商银行储蓄卡
+      methodAccount: Assets:CN:SHRCB:Checking
+    - method: 工商银行储蓄卡
+      methodAccount: Assets:CN:ICBC:Checking
+
+    - item: 支付宝五福的红包,淘宝签到提现,淘宝报销机活动提现
+      methodAccount: Income:CN:AliPay:Hongbao
+      targetAccount: Assets:CN:AliPay:Checking
+
+    - item: 余额宝
+      type: 不计收支
+      methodAccount: Assets:CN:AliPay:Checking
+      targetAccount: Assets:CN:AliPay:YuEBao
+    - method: 余额宝
+      item: 收益发放
+      methodAccount: Income:CN:AliPay:YuEBao:PnL
+      targetAccount: Assets:CN:AliPay:YuEBao

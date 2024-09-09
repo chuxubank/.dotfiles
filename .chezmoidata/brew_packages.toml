@@ -22,6 +22,7 @@ brews = [
   "cmake",
   "coreutils",
   "curl",
+  "deb-sig/tap/double-entry-generator",
   "fava",
   "fd",
   "fzf",
