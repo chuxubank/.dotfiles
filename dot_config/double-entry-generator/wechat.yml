@@ -6,61 +6,220 @@ title: 微信
 wechat:
   rules:
     - type: 收入
-      peer: 褚显峰
+      peer: 褚显峰,Chu
       targetAccount: Income:Person:Feng
     - type: 支出
-      peer: 褚显峰
+      peer: 褚显峰,Chu
       targetAccount: Expenses:Person:Feng
     - type: 收入
-      peer: 李珍
+      peer: 李君秋,jjooneee
+      targetAccount: Income:Person:Qiu
+    - type: 支出
+      peer: 李君秋,jjooneee
+      targetAccount: Expenses:Person:Qiu
+    - type: 收入
+      peer: 李珍,珍时精舍
       targetAccount: Income:Person:Zhen
     - type: 支出
-      peer: 李珍
+      peer: 李珍,珍时精舍
       targetAccount: Expenses:Person:Zhen
     - type: 收入
-      peer: 小🐷
+      peer: 小🐷,🍯_trap
       targetAccount: Income:Person:Ning
-    - type: 支出
-      peer: 小🐷
+    - type: 收入
+      peer: /
       targetAccount: Expenses:Person:Ning
+    - type: 支出
+      peer: 小🐷,🍯_trap
+      targetAccount: Expenses:Person:Ning
+    - type: 收入
+      peer: Sunset,日落底迪
+      targetAccount: Income:Person:Sunset
+    - type: 支出
+      peer: Sunset,日落底迪
+      targetAccount: Expenses:Person:Sunset
+    - type: 收入
+      peer: Morty
+      targetAccount: Income:Person:Morty
+    - type: 支出
+      peer: Morty
+      targetAccount: Expenses:Person:Morty
+    - type: 收入
+      peer: Anthony
+      targetAccount: Income:Person:Anthony
+    - type: 支出
+      peer: Anthony
+      targetAccount: Expenses:Person:Anthony
+    - type: 收入
+      peer: 熊绍狮
+      targetAccount: Income:Person:Teddy
+    - type: 支出
+      peer: 熊绍狮
+      targetAccount: Expenses:Person:Teddy
+    - type: 收入
+      peer: 李忠山,蔷薇,光阴的故事,从头做起,Hui,Eric,Eason,Paul,Toby,韦小宝
+      targetAccount: Income:Gift
+    - type: 支出
+      peer: 发出群红包,李忠山
+      targetAccount: Expenses:Gift
+    - type: 收入
+      peer: Misaka
+      targetAccount: Expenses:Gift
 
-    - item: MUJI
+    - type: 收入
+      peer: 顾昀
+      targetAccount: Income:Sideline:Calligraphy
+
+    - item: 二维码收款
+      targetAccount: Expenses:Transport:Car:Parking
+
+    - type: 支出
+      item: 美团月付
+      targetAccount: Liabilities:CN:Meituan:Yuefu
+
+    - peer: 医院,药房
+      targetAccount: Expenses:Health:Medical
+
+    - item: MUJI,开市客,citysuper,Purcotton,CAPITALAND,名创优品
+      targetAccount: Expenses:Utilities
+    - peer: 华润,环盛,超市,便利,CAPITALAND
       targetAccount: Expenses:Utilities
 
-    - item: 点餐,餐饮,餐厅,面馆,堂食,美团收银,美团合作商家订单,Meituan,全州印象,四海游龙,Popeyes
+    - item: 充电宝
+      targetAccount: Expenses:Rental:ChargingDevice
+
+    - peer: 喜姐炸串
+      targetAccount: Expenses:Food:StreetFood
+    - item: 臭豆腐
+      targetAccount: Expenses:Food:StreetFood
+
+    - peer: 罗森点点,巴比
       time: 6:00-10:00
       targetAccount: Expenses:Food:Restaurant:Breakfast
-    - item: 点餐,餐饮,餐厅,面馆,堂食,美团收银,美团合作商家订单,Meituan,全州印象,四海游龙,Popeyes
+    - item: 点餐,餐饮,餐厅,面馆,堂食,美团收银,美团合作商家订单,久久折套餐付款,Meituan,全州印象,四海游龙,Popeyes,KFC,麦当劳,SOHO
+      time: 6:00-10:00
+      targetAccount: Expenses:Food:Restaurant:Breakfast
+
+    - peer: 袁记,馔宝堡
       time: 11:00-14:00
       targetAccount: Expenses:Food:Restaurant:Lunch
-    - item: 点餐,餐饮,餐厅,面馆,堂食,美团收银,美团合作商家订单,Meituan,全州印象,四海游龙,Popeyes
+    - item: 点餐,餐饮,餐厅,面馆,堂食,大众点评订单,美团订单,美团收银,美团合作商家订单,久久折套餐付款,Meituan,全州印象,四海游龙,Popeyes,KFC,麦当劳,湖光山色,Mercado,平成屋,PHDI,上海阿婆,猪角,酷味乐,吉祥馄饨,泉膳,Dominos,好好彩
+      time: 11:00-14:00
+      targetAccount: Expenses:Food:Restaurant:Lunch
+
+    - peer: 袁记,馔宝堡
       time: 16:00-22:00
       targetAccount: Expenses:Food:Restaurant:Dinner
-    - peer: 趁热集合,生吐司,百丘,黄油与面包
+    - item: 点餐,餐饮,餐厅,面馆,堂食,大众点评订单,美团订单,美团收银,美团合作商家订单,久久折套餐付款,Meituan,全州印象,四海游龙,Popeyes,KFC,麦当劳,湖光山色,Mercado,平成屋,PHDI,上海阿婆,猪角,酷味乐,吉祥馄饨,泉膳,Dominos,好好彩
+      time: 16:00-22:00
+      targetAccount: Expenses:Food:Restaurant:Dinner
+
+    - peer: 趁热集合,生吐司,百丘,Pain Chaud,黄油与面包,FASCINO,泽田,PAOPAO,brown sixty,七日治,TonTon,DRUNK,安上烘焙,OUR Bakery,福福饼店,LittleRoli,面包联盟,好利来
       targetAccount: Expenses:Food:Bread
-    - peer: 茉莉奶白
+    - peer: 茉莉奶白,CHARLIETOWN,阿嬷手作,裕莲茶楼,LINLEE,另茶,1 点点,1点点,喜茶,T9tea,悸动烧仙草
       targetAccount: Expenses:Food:Drinks:MilkTea
-    - item: COFFEE,Coffee
+    - item: 1点点,喜茶,伯爵茶
+      targetAccount: Expenses:Food:Drinks:MilkTea
+    - peer: teastone
+      targetAccount: Expenses:Food:Drinks:Tea
+    - item: COFFEE,Coffee,DirtySoe
       targetAccount: Expenses:Food:Drinks:Coffee
-    - peer: Manner,luckin,M Stand
+    - peer: Manner,luckin,M Stand,ops,todos,星巴克,起时咖啡,咖啡,abcPlayer,seesaw,PeetsCoffee,三立方,CANCOMPANY
       targetAccount: Expenses:Food:Drinks:Coffee
-    - peer: 红楼
+    - peer: PLUTO
+      targetAccount: Expenses:Food:Drinks:Alcohol
+    - peer: Kmart
+      targetAccount: Expenses:Food:Groceries
+    - peer: 7-11,优同,7-ELEVEN,LAWSON,京东便利,家家乐,饮品,HotMaxx,全家
+      targetAccount: Expenses:Food:Drinks
+    - peer: 红楼,dipingelato,Dallatte
       targetAccount: Expenses:Food:Desserts:IceCream
-    - peer: 叙夏
+    - item: Luneurs
+      sep: （）
+      targetAccount: Expenses:Food:Desserts:IceCream
+    - item: 蛋糕
+      targetAccount: Expenses:Food:Desserts:Cake
+    - peer: Pie Bird,SEE THEE,Shanghailander
+      targetAccount: Expenses:Food:Desserts:Cake
+    - peer: Venchi
+      targetAccount: Expenses:Food:Desserts:Chocolate
+    - item: 巧克力
+      targetAccount: Expenses:Food:Desserts:Chocolate
+    - peer: 叙夏,PAPITO,恋恋仙草,Little RAC,Madeleine,DayDreaming,TORIS DESSERT,糖水
       targetAccount: Expenses:Food:Desserts
-    - item: citysuper
+    - item: 久鼎,琦王花生,薛记炒货,农之态果品
       targetAccount: Expenses:Food:Groceries
 
-    - peer: SPAO
-      targetAccount: Expenses:Cloth
+    - peer: 自如
+      targetAccount: Expenses:Home:ZiRoom:Rent
+    - peer: 自如
+      item: 生活费用
+      targetAccount: Expenses:Home:ZiRoom:Living
+    - peer: 燃气
+      item: 生活缴费
+      targetAccount: Expenses:Person:Ning:Shangnan
+    - peer: 华住
+      targetAccount: Expenses:Hotel
+
+    - peer: SPAO,耐克,UNIQLO,HM
+      targetAccount: Expenses:Clothing
+
+    - peer: cdf,中免日上,睛姿,美甲,美睫,日上免税行
+      targetAccount: Expenses:PersonalCare
+    - item: Oliveyoung
+      targetAccount: Expenses:PersonalCare
+    - peer: 京世沙龙
+      targetAccount: Expenses:PersonalCare:HearCut
+    - peer: 蒂芙尼
+      targetAccount: Expenses:Accessories
+    - peer: 第六粮油
+      item: 中华
+      targetAccount: Expenses:Gift:Tobacco
 
     - peer: 中国电信
       targetAccount: Expenses:Communication
+    - peer: Apple
+      targetAccount: Expenses:Electronics
 
-    - peer: 😶😶😶,搜候
+    - item: 图书
+      targetAccount: Expenses:Books
+
+    - peer: POP MART
+      targetAccount: Expenses:Entertainment:Toys
+    - peer: 大头贴
+      targetAccount: Expenses:Entertainment:PhotoBooth
+    - peer: 上海上图书店,上海博物馆
+      targetAccount: Expenses:Entertainment:Exhibition
+    - peer: LiveLab
+      targetAccount: Expenses:Entertainment:Concert
+    - peer: 淘票票,中影泰得,中福企福,东方福利网,艾力斯特
+      targetAccount: Expenses:Entertainment:Movies
+    - peer: Valve
+      targetAccount: Expenses:Entertainment:Game
+    - peer: 体育
+      targetAccount: Expenses:Entertainment:Sports
+
+    - peer: 顺丰
+      targetAccount: Expenses:Transport:Express
+    - peer: 滴滴
+      targetAccount: Expenses:Transport:Taxi
+    - peer: 春秋航空
+      targetAccount: Expenses:Travel:Transport:Flights
+    - item: 门票
+      targetAccount: Expenses:Travel:Tickets
+    - item: 交通罚没
+      targetAccount: Expenses:Transport:Fine
+    - peer: 搜候,物业,协和家园,新业坊源创
       targetAccount: Expenses:Transport:Car:Parking
-    - item: 停车,50223
+    - item: 停车,50223,002H0,订车位
       targetAccount: Expenses:Transport:Car:Parking
+    - peer: 平安财产保险
+      targetAccount: Expenses:Transport:Car:KiaSoul:Insurance
+    - item: 修车
+      targetAccount: Expenses:Transport:Car:KiaSoul:Maintenance
+
+    - peer: 腾讯云
+      targetAccount: Expenses:Communication:Proxy
 
     - method: /
       methodAccount: Assets:CN:WeChatPay:Checking
@@ -70,11 +229,11 @@ wechat:
     - method: 零钱通
       fullMatch: true
       methodAccount: Assets:CN:WeChatPay:MiniFund
-    - method: 浦发银行储蓄卡
+    - method: 浦发银行
       methodAccount: Assets:CN:SPDB:Checking
-    - method: 江苏银行储蓄卡
+    - method: 江苏银行
       methodAccount: Assets:CN:JSB:Checking
-    - method: 上海农商银行储蓄卡
+    - method: 上海农商银行
       methodAccount: Assets:CN:SHRCB:Checking
-    - method: 工商银行储蓄卡
+    - method: 工商银行
       methodAccount: Assets:CN:ICBC:Checking
