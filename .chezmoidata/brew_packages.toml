@@ -28,6 +28,7 @@ brews = [
   "fzf",
   "gcc",
   "git",
+  "git-filter-repo",
   "git-lfs",
   "gitwatch",
   "gnupg",
