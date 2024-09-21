@@ -1,0 +1,7 @@
+Include ~/.orbstack/ssh/config
+
+Include ~/.config/ssh/personal/config
+
+{{ if eq .hosttype "work" -}}
+Include ~/.config/ssh/aa/config
+{{ end -}}
