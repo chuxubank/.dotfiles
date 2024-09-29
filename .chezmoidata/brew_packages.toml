@@ -14,6 +14,7 @@ brews = [
   "aspell",
   "autorestic",
   "beancount",
+  "beancount-language-server",
   "bfg",
   "black",
   "btop",
