@@ -9,6 +9,7 @@ taps = [
   "railwaycat/emacsmacport",
 ]
 brews = [
+  "ansible",
   "antidote",
   "apktool",
   "aspell",
