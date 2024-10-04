@@ -80,6 +80,7 @@ brews = [
   "rust",
   "scrcpy",
   "sleepwatcher",
+  "sshpass",
   "starship",
   "swagger-codegen",
   "switchaudio-osx",
@@ -146,7 +147,6 @@ casks = [
   "lyricsx",
   "mactex-no-gui",
   "microsoft-edge",
-  "microsoft-remote-desktop",
   "mitmproxy",
   "monitorcontrol",
   "motrix",
@@ -169,9 +169,10 @@ casks = [
   "stats",
   "visual-studio-code",
   "wezterm",
+  "windows-app",
   "wireshark",
   "xquartz",
-  "zotero@beta",
+  "zotero",
 ]
 
 [packages.darwin.mas]
