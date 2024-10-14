@@ -157,7 +157,6 @@ casks = [
   "obsidian",
   "orbstack",
   "postman",
-  "proxifier",
   "proxyman",
   "raspberry-pi-imager",
   "raycast",
@@ -173,6 +172,7 @@ casks = [
   "xquartz",
   "zotero",
   { name = "intune-company-portal", when = "work" },
+  { name = "proxifier", when = "home" },
 ]
 
 [packages.darwin.mas]
