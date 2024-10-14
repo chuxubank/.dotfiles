@@ -172,6 +172,7 @@ casks = [
   "wireshark",
   "xquartz",
   "zotero",
+  { name = "intune-company-portal", when = "work" },
 ]
 
 [packages.darwin.mas]
