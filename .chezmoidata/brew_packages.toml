@@ -77,6 +77,7 @@ brews = [
   "rclone",
   "ripgrep",
   "rust",
+  "rustup",
   "scrcpy",
   "sleepwatcher",
   "sshpass",
