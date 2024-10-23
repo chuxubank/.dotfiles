@@ -1,0 +1,35 @@
+{{- /* chezmoi:modify-template */ -}}
+
+{{- $data := `{
+  "realtime_0": {
+    "front": {
+      "side_enabled": true,
+      "source": {
+        "mode": "AnkiTTSTag",
+        "field_name": "expression",
+        "field_type": "Regular"
+      },
+      "voice_selection": {
+        "voice_selection_mode": "single",
+        "voice": {
+          "voice_id": {
+            "voice_key": { "name": "Eddy (English (US))" },
+            "service": "MacOS"
+          },
+          "options": {}
+        }
+      },
+      "text_processing": {
+        "html_to_text_line": true,
+        "strip_brackets": false,
+        "ssml_convert_characters": true,
+        "run_replace_rules_after": true,
+        "ignore_case": false,
+        "text_replacement_rules": []
+      }
+    },
+    "back": { "side_enabled": false }
+  }
+}` | fromJson -}}
+
+{{ fromJson .chezmoi.stdin | setValueAtPath "config.realtime_config" $data | toJson }}
