@@ -80,9 +80,9 @@ wechat:
     - peer: 医院,药房
       targetAccount: Expenses:Health:Medical
 
-    - item: MUJI,开市客,citysuper,Purcotton,CAPITALAND,名创优品
+    - item: MUJI,开市客,Costco,citysuper,Purcotton,CAPITALAND,名创优品,给到
       targetAccount: Expenses:Utilities
-    - peer: 华润,环盛,超市,便利,CAPITALAND
+    - peer: 华润,环盛,超市,便利,CAPITALAND,Costco,关爱通
       targetAccount: Expenses:Utilities
 
     - item: 充电宝
@@ -116,7 +116,7 @@ wechat:
 
     - peer: 趁热集合,生吐司,百丘,Pain Chaud,黄油与面包,FASCINO,泽田,PAOPAO,brown sixty,七日治,TonTon,DRUNK,安上烘焙,OUR Bakery,福福饼店,LittleRoli,面包联盟,好利来
       targetAccount: Expenses:Food:Bread
-    - peer: 茉莉奶白,CHARLIETOWN,阿嬷手作,裕莲茶楼,LINLEE,另茶,1 点点,1点点,喜茶,T9tea,悸动烧仙草
+    - peer: 茉莉奶白,CHARLIETOWN,阿嬷手作,裕莲茶楼,LINLEE,另茶,1 点点,1点点,喜茶,T9tea,悸动烧仙草,椿风
       targetAccount: Expenses:Food:Drinks:MilkTea
     - item: 1点点,喜茶,伯爵茶
       targetAccount: Expenses:Food:Drinks:MilkTea
@@ -130,7 +130,7 @@ wechat:
       targetAccount: Expenses:Food:Drinks:Alcohol
     - peer: Kmart
       targetAccount: Expenses:Food:Groceries
-    - peer: 7-11,优同,7-ELEVEN,LAWSON,京东便利,家家乐,饮品,HotMaxx,全家
+    - peer: 7-11,优同,7-ELEVEN,LAWSON,京东便利,家家乐,饮品,HotMaxx,HOT MAXX,全家
       targetAccount: Expenses:Food:Drinks
     - peer: 红楼,dipingelato,Dallatte
       targetAccount: Expenses:Food:Desserts:IceCream
