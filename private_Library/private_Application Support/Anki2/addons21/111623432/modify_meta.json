@@ -1,6 +1,25 @@
 {{- /* chezmoi:modify-template */ -}}
 
-{{- $data := `{
+{{- $configuration := `{
+  "hypertts_pro_api_key": null,
+  "service_config": {},
+  "service_enabled": {
+    "Cambridge": true,
+    "DigitalesWorterbuchDeutschenSprache": true,
+    "Duden": true,
+    "ESpeakNg": true,
+    "GoogleTranslate": true,
+    "MacOS": true,
+    "NaverPapago": true,
+    "Oxford": true,
+    "SpanishDict": true,
+    "Windows": true
+  },
+  "use_vocabai_api": false,
+  "vocabai_api_url_override": null
+}` | fromJson -}}
+
+{{- $realtimeConfig := `{
   "realtime_0": {
     "front": {
       "side_enabled": true,
@@ -32,4 +51,7 @@
   }
 }` | fromJson -}}
 
-{{ fromJson .chezmoi.stdin | setValueAtPath "config.realtime_config" $data | toJson }}
+{{ fromJson .chezmoi.stdin |
+   setValueAtPath "config.realtime_config" $realtimeConfig |
+   setValueAtPath "config.configuration" $configuration |
+   toJson }}
