@@ -73,6 +73,8 @@ alipay:
       targetAccount: Expenses:Hotel
     - item: 公交
       targetAccount: Expenses:Transport:Public
+    - peer: 公共交通
+      targetAccount: Expenses:Transport:Public
     - item: 单车
       targetAccount: Expenses:Transport:Public:Bike
     - peer: 哈啰出行
@@ -101,6 +103,8 @@ alipay:
     - peer: 南方航空
       targetAccount: Expenses:Travel:Transport:Flights
 
+    - peer: 中国电信
+      targetAccount: Expenses:Communication
     - peer: racknerd
       targetAccount: Expenses:Communication:Proxy
     - peer: bwh
