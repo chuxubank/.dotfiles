@@ -8,6 +8,7 @@ function source_if_exists_outside_emacs {
 
 export TZ="Asia/Shanghai"
 export EMAIL={{ .email | quote }}
+export HOST_TYPE={{ .hosttype | quote }}
 
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
