@@ -26,6 +26,7 @@ brews = [
   "curl",
   "deb-sig/tap/double-entry-generator",
   "docx2txt",
+  "exiftool",
   "fava",
   "fd",
   "fzf",
