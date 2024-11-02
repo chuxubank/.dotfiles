@@ -25,6 +25,7 @@ brews = [
   "coreutils",
   "curl",
   "deb-sig/tap/double-entry-generator",
+  "docx2txt",
   "fava",
   "fd",
   "fzf",
