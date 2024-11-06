@@ -133,6 +133,7 @@ casks = [
   "font-newsreader",
   "font-noto-sans",
   "font-noto-sans-math",
+  "font-noto-sans-tai-viet",
   "font-noto-serif",
   "font-roboto",
   "font-roboto-mono",
