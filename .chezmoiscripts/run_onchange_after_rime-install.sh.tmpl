@@ -1,11 +1,14 @@
 #!/bin/zsh
 
 {{- if eq .chezmoi.os "darwin" }}
-echo "󰯁 Update librime"
+echo "󰯁 Update librime for Emacs usage"
 export rime_dir=$HOME/.rime/data/
 bash rime-install double-pinyin
 bash rime-install emoji:customize:schema=luna_pinyin
 bash rime-install emoji:customize:schema=double_pinyin_flypy
+
+bash rime-install iDvel/rime-ice:others/recipes/full
+bash rime-install iDvel/rime-ice:others/recipes/config:schema=flypy
 {{- end }}
 
 echo "󰯁 Update rime with {{ output "git" "-C" (joinPath .chezmoi.homeDir ".plum") "rev-parse" "HEAD" }}"
@@ -13,3 +16,6 @@ export rime_dir=""
 bash rime-install double-pinyin
 bash rime-install emoji:customize:schema=luna_pinyin
 bash rime-install emoji:customize:schema=double_pinyin_flypy
+
+bash rime-install iDvel/rime-ice:others/recipes/full
+bash rime-install iDvel/rime-ice:others/recipes/config:schema=flypy
