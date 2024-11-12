@@ -14,11 +14,6 @@ export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
 export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 export HOMEBREW_API_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles/api"
 
-# Java
-export PATH="$(brew --prefix java)/bin:$PATH"
-[[ -f "/usr/libexec/java_home" ]] && export JAVA_HOME=$(/usr/libexec/java_home -v 21)
-export CPPFLAGS="-I$(brew --prefix java)/include"
-
 # Python
 export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 source virtualenvwrapper.sh
