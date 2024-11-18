@@ -9,9 +9,11 @@ taps = [
   "railwaycat/emacsmacport",
 ]
 brews = [
+  "agg",
   "ansible",
   "antidote",
   "apktool",
+  "asciinema",
   "aspell",
   "autorestic",
   "beancount",
