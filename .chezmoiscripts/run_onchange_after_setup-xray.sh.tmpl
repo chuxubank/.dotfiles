@@ -1,42 +1,7 @@
-{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/zsh
 
-echo "󰯁 Setup xray with {{ output "git" "-C" (joinPath .chezmoi.homeDir ".config/proxy") "rev-parse" "HEAD" }}"
+echo "󰯁 Setup proxy with {{ output "git" "-C" (joinPath .chezmoi.homeDir ".config/proxy") "rev-parse" "HEAD" }}"
 echo "Xray running: {{ output "brew" "services" "info" "xray" "--json" | fromJson | jq ".[0].running" | first }}"
-logrotate -f ~/.config/logrotate.d/xray -s ~/.config/logrotate.status
 
-brew services stop xray
-brew services start xray --file=/dev/stdin <<EOF
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-  <dict>
-    <key>KeepAlive</key>
-    <true/>
-    <key>Label</key>
-    <string>homebrew.mxcl.xray</string>
-    <key>StandardOutPath</key>
-    <string>{{ .chezmoi.homeDir }}/Library/Logs/Xray/xray-stdout.log</string>
-    <key>StandardErrorPath</key>
-    <string>{{ .chezmoi.homeDir }}/Library/Logs/Xray/xray-stderr.log</string>
-    <key>LimitLoadToSessionType</key>
-    <array>
-      <string>Aqua</string>
-      <string>Background</string>
-      <string>LoginWindow</string>
-      <string>StandardIO</string>
-      <string>System</string>
-    </array>
-    <key>ProgramArguments</key>
-    <array>
-      <string>{{ .path.brew }}/bin/xray</string>
-      <string>run</string>
-      <string>-confdir</string>
-      <string>{{ .chezmoi.homeDir }}/.config/proxy/client/xray</string>
-    </array>
-    <key>RunAtLoad</key>
-    <true/>
-  </dict>
-</plist>
-EOF
-{{ end -}}
+cd ~/.config/proxy/ansible/
+ansible-playbook playbook.yml --limit localhost
