@@ -63,8 +63,6 @@ brews = [
   "mupdf",
   "neovim",
   "openapi-generator",
-  "openjdk@11",
-  "openjdk@17",
   "p7zip",
   "pandoc",
   "pass",
