@@ -4,7 +4,7 @@
 IMAPAccount qq
 Host imap.qq.com
 User chuxubank@qq.com
-PassCmd "pass show Personal/Social/QQMail | head -1"
+PassCmd "pass show Personal/Social/Tencent/QQMail | head -1"
 TLSType IMAPS
 
 IMAPStore qq-remote
