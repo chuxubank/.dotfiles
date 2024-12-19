@@ -185,7 +185,7 @@ else
     alias upe="\emacsclient -a='' --eval '(package-upgrade-all)' && \emacsclient --eval '(kill-emacs)' && \emacs --daemon"
 fi
 alias upc="chezmoi update --init -a"
-alias upn="pnpm self-update && pnpm up -g"
+alias upn="bun update -g"
 alias up="upc && upb && upn && upe"
 
 {{- if eq .hosttype "work" }}

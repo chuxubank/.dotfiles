@@ -6,6 +6,7 @@ taps = [
   "homebrew/command-not-found",
   "homebrew/services",
   "jimeh/emacs-builds",
+  "oven-sh/bun",
   "railwaycat/emacsmacport",
 ]
 brews = [
@@ -21,6 +22,7 @@ brews = [
   "bfg",
   "black",
   "btop",
+  "bun",
   "byobu",
   "chezmoi",
   "cmake",

@@ -31,12 +31,9 @@ export HASS_SERVER=http://homeassistant.local:8123
 # Jira
 export JIRA_URL="https://aaecosystem.atlassian.net"
 
-# PNPM
-export PNPM_HOME="$HOME/.pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+# Bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 
 # plum
 export PLUM_DIR="$HOME/.plum"
