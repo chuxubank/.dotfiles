@@ -53,6 +53,7 @@ brews = [
   "kotlin",
   "kotlin-language-server",
   "ktlint",
+  "lefthook",
   "libgccjit",
   "libvterm",
   "logrotate",
@@ -199,7 +200,6 @@ casks = [
 "Final Cut Pro" = 424389933
 "Immersive Translate" = 6447957425
 "Juice" = 1478610778
-"KeyPad" = 1491684442
 "Kindle" = 302584613
 "Logic Pro" = 634148309
 "MainStage" = 634159523
