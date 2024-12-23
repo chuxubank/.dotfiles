@@ -14,5 +14,4 @@
 # @raycast.author Misaka
 # @raycast.authorURL https://github.com/chuxubank
 
-source ~/.zshrc
-proxy enable && emacsclient -cn -a=""
+emacsclient -cn -a=""
