@@ -1,0 +1,4 @@
+theme = light:GruvboxLight,dark:GruvboxDark
+mouse-hide-while-typing = true
+
+window-padding-balance = true
