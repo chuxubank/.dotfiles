@@ -124,6 +124,7 @@ casks = [
   "bilibili",
   "blackhole-16ch",
   "calibre",
+  "chatgpt",
   "deepl",
   "discord",
   "emacs-app",
